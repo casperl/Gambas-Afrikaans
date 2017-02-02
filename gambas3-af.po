@@ -4,9 +4,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gambas3 3.9.2\n"
-"PO-Revision-Date: 2017-02-02 06:52+0200\n"
+"PO-Revision-Date: 2017-02-02 17:45+0200\n"
 "Last-Translator: Casper Labuschagne <casper.labuschagne@gmail.com>\n"
-"Language-Team: [Gambas Afrikaanse vertalingswebblad kom hier]\n"
+"Language-Team: https://sites.google.com/site/gambasafrikaans/\n"
 "Language: af\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -69,7 +69,7 @@ msgstr "Metodes"
 
 #: CClassInfo.class:623
 msgid "Events"
-msgstr "Gebeurtenisse"
+msgstr "Gebeure"
 
 #: CClassInfo.class:645
 msgid "This class reimplements &1"
@@ -87,7 +87,7 @@ msgstr "in &1"
 msgid "This class can be used like an object by creating an hidden instance on demand."
 msgstr ""
 "Hierdie klas kan gebruik word as 'n objek deur 'n verborge instansie op "
-"versoek te skep."
+"aanvraag te skep."
 
 #: CClassInfo.class:666
 msgid "This class is &1."
@@ -159,7 +159,9 @@ msgstr "Hierdie klas is virtueel."
 
 #: CClassInfo.class:864
 msgid "This class can be used like an object by creating a hidden instance on demand."
-msgstr "Hierdie klas kan gebruik word as 'n objek deur 'n verborge instansie op versoek te skep."
+msgstr ""
+"Hierdie klas kan gebruik word as 'n objek deur 'n verborge instansie op "
+"versoek te skep."
 
 #: CClassInfo.class:889
 msgid "static function"
@@ -167,11 +169,11 @@ msgstr "statiese funksie"
 
 #: CClassInfo.class:896
 msgid "This class acts like a &1 / &2 static array."
-msgstr "Hierdie klas dien as 'n &1 / &2 statiese reeks."
+msgstr "Hierdie klas dien as 'n &1 / &2 statiese skikking."
 
 #: CClassInfo.class:898
 msgid "This class acts like a &1 static array."
-msgstr "Hierdie\tklas dien as 'n &1 statiese reeks."
+msgstr "Hierdie\tklas dien as 'n &1 statiese skikking."
 
 #: CClassInfo.class:910
 msgid "This class is &1 with the &2 keyword."
@@ -183,7 +185,7 @@ msgstr "staties opsombaar"
 
 #: CComponent.class:489
 msgid "Loading information on component &1..."
-msgstr "Informasie lê voor komponent &1..."
+msgstr "Laai inligting af oor komponent &1..."
 
 #: CComponent.class:1598 FFileProperty.class:160 FProjectProperty.class:900
 msgid "Classes"
@@ -215,7 +217,7 @@ msgstr "Outeurs"
 
 #: CComponent.class:1694
 msgid "Implements"
-msgstr "Werktuie"
+msgstr "Implementeer"
 
 #: CComponent.class:1706 CLibraryInfo.class:189 LibraryItem.class:60
 msgid "Requires"
@@ -223,7 +225,7 @@ msgstr "Vereistes"
 
 #: CComponent.class:1721
 msgid "Excludes"
-msgstr "Uitsonderinge"
+msgstr "Sluit uit"
 
 #: CDocumentation.class:48
 msgid "Internal native classes"
@@ -232,7 +234,7 @@ msgstr "Interne inheemse klasse"
 #: CDocumentation.class:49
 #, fuzzy
 msgid "Program arguments parser"
-msgstr "Program argumente parser"
+msgstr "Program argument sinsontleder"
 
 #: CDocumentation.class:50
 msgid "Cairo graphic library"
@@ -244,15 +246,13 @@ msgstr "Grafiek teken"
 
 #: CDocumentation.class:52
 msgid "Polygon management based on Clipper library"
-msgstr "Polygoon beheer op basis van Clipper biblioteek"
+msgstr "Veelhoek bestuur gebasseer op die Clipper biblioteek"
 
 #: CDocumentation.class:53
-#, fuzzy
 msgid "Complex numbers management"
-msgstr "Complekse nommers beheer"
+msgstr "Complekse getalle bestuur"
 
 #: CDocumentation.class:54
-#, fuzzy
 msgid "Compression & decompression"
 msgstr "Kompressie & dekompressie"
 
@@ -303,11 +303,12 @@ msgstr "SQLite 3 databasis stuurprogram"
 #: CDocumentation.class:67
 #, fuzzy
 msgid "Application debugger helper"
-msgstr "Toepassings debugger helper"
+msgstr "Toepassings debugger hulp"
 
 #: CDocumentation.class:68
+#, fuzzy
 msgid "Desktop management component"
-msgstr "Desktopbeheer komponent"
+msgstr "Desktop bestuur komponent"
 
 #: CDocumentation.class:69
 msgid "X-Window library support"
@@ -315,7 +316,7 @@ msgstr "X-Window biblioteek ondersteuning"
 
 #: CDocumentation.class:70
 msgid "Gnome keyring support for desktop management component"
-msgstr "Gnome keyring ondersteuning vir die desktop beheer komponent"
+msgstr "Gnome keyring ondersteuning vir die desktop bestuur komponent"
 
 #: CDocumentation.class:71
 #, fuzzy
@@ -325,9 +326,10 @@ msgstr "D-Bus koppeling"
 #: CDocumentation.class:72
 #, fuzzy
 msgid "Expression evaluator"
-msgstr "Uitdrukkingsevalueerder"
+msgstr "Uitdrukking evalueerder"
 
 #: CDocumentation.class:73
+#, fuzzy
 msgid "Syntax highlighter routines"
 msgstr "Sintaks aksentueer roetines"
 
@@ -351,23 +353,24 @@ msgstr "Multidokument Koppeling"
 
 #: CDocumentation.class:78
 msgid "Default icon theme"
-msgstr "Standaard ikoontema"
+msgstr "Standaard ikoon tema"
 
 #: CDocumentation.class:79
 msgid "Terminal emulator"
-msgstr "Terminaalemuleerder"
+msgstr "Terminaal emulator"
 
 #: CDocumentation.class:80
 msgid "GNU Multiple Precision Arithmetic Library"
-msgstr "GNU Multipresiesie Matematiesebiblioteek"
+msgstr "GNU Meerderepresiesie Rekeningkundigebiblioteek"
 
 #: CDocumentation.class:81
 msgid "GNU Scientific Library"
 msgstr "GNU Wetenskaplike biblioteek"
 
 #: CDocumentation.class:82
+#, fuzzy
 msgid "GTK+2 toolkit"
-msgstr "GTK+2 gereedskapskis"
+msgstr "GTK+2 gereedskapsk"
 
 #: CDocumentation.class:83
 msgid "OpenGL with GTK+ toolkit"
@@ -378,6 +381,7 @@ msgid "GTK+3 toolkit"
 msgstr "GTK+3 gereedskapskis"
 
 #: CDocumentation.class:85
+#, fuzzy
 msgid "QT/GTK+ switcher component"
 msgstr "QT/GTK+ wisselkomponent"
 
@@ -394,8 +398,9 @@ msgid "QT4/QT5 WebKit switcher component"
 msgstr "QT4/QT5 WebKit wisselkomponent"
 
 #: CDocumentation.class:89
+#, fuzzy
 msgid "System tray icon management component"
-msgstr "System tray ikoon beheerkomponent"
+msgstr "Systeemvak ikoon bestuurskomponent"
 
 #: CDocumentation.class:90
 msgid "Embedded HTTP server"
@@ -415,19 +420,20 @@ msgstr "Beeldroetines van die lmlib2 biblioteek"
 
 #: CDocumentation.class:94 FProjectProperty.form:514
 msgid "Image loading and saving"
-msgstr "Beeld laai en stoor"
+msgstr "Beeld laai en spaar"
 
 #: CDocumentation.class:95
 msgid "Filesystem events monitoring"
-msgstr "Lêerstelsel voorvalmonitering"
+msgstr "Lêerstelsel voorval monitering"
 
 #: CDocumentation.class:96
+#, fuzzy
 msgid "XML tools based on libxml"
-msgstr "XML gereedskappe gebaseer op libxml"
+msgstr "XML gereedskap gebaseer op libxml"
 
 #: CDocumentation.class:97
 msgid "Flexible logging system"
-msgstr "Aanpasbare logsisteem"
+msgstr "Buigsame aanmeldingstelsel"
 
 #: CDocumentation.class:98
 msgid "Online map viewer"
@@ -440,11 +446,11 @@ msgstr "Gambas Markdown bemerkingsintaks"
 
 #: CDocumentation.class:100
 msgid "GStreamer multimedia component"
-msgstr "GStreamer multimedia component"
+msgstr "GStreamer multimedia komponent"
 
 #: CDocumentation.class:101
 msgid "Multimedia controls"
-msgstr "Multimediabeheervlakke"
+msgstr "Multimedia beheervlakke"
 
 #: CDocumentation.class:102
 msgid "Memcached client"
@@ -452,63 +458,64 @@ msgstr "Memcached kliënt"
 
 #: CDocumentation.class:103
 msgid "MIME format management based on GMime library"
-msgstr "MIME formaat beheer gebaseerd op GMime bibliotheek"
+msgstr "MIME formaat bestuur gebaseer op GMime biblioteek"
 
 #: CDocumentation.class:104
 msgid "MySQL specific routines"
-msgstr "MySQL specifieke routines"
+msgstr "MySQL spesifieke roetines"
 
 #: CDocumentation.class:105
 msgid "NCurses library"
-msgstr "NCurses bibliotheek"
+msgstr "NCurses biblioteek"
 
 #: CDocumentation.class:106 FCreateProjectOld.form:300
 msgid "Network programming"
-msgstr "Netwerk programmeren"
+msgstr "Netwerk programmering"
 
 #: CDocumentation.class:107
 msgid "Network high-level protocols management"
-msgstr "Netwerk high-level protocol beheer"
+msgstr "Netwerk hoëvlak protokol bestuur"
 
 #: CDocumentation.class:108
 msgid "POP3 client"
-msgstr "POP3 cliënt"
+msgstr "POP3 kliënt"
 
 #: CDocumentation.class:109
 msgid "SMTP client"
-msgstr "SMTP cliënt"
+msgstr "SMTP kliënt"
 
 #: CDocumentation.class:110
 msgid "OpenAL 3D audio library"
-msgstr "OpenAL 3D audio bibliotheek"
+msgstr "OpenAL 3D oudio biblioteek"
 
 #: CDocumentation.class:111
 msgid "3D programming with OpenGL"
-msgstr "3D programmeren met OpenGL"
+msgstr "3D programmering met OpenGL"
 
 #: CDocumentation.class:112
 msgid "OpenGL utility component"
-msgstr "OpenGL hulpprogramma component"
+msgstr "OpenGL nutsprogram komponent"
 
 #: CDocumentation.class:113
 msgid "OpenGL shaders management"
-msgstr "OpenGL shaders beheer"
+msgstr "OpenGL `shaders` bestuur"
 
 #: CDocumentation.class:114
 msgid "Simple OpenGL game engine based on MD2 format"
-msgstr "Eenvoudige OpenGL game engine gebaseerd op MD2 formaat"
+msgstr "Eenvoudige OpenGL spel enjin gebaseer op MD2 formaat"
 
 #: CDocumentation.class:115
 msgid "OpenSSL library routines"
-msgstr "OpenSSL bibliotheek routines"
+msgstr "OpenSSL biblioteek roetines"
 
 #: CDocumentation.class:116
 msgid "GNU command option parser"
-msgstr "GNU commando optie parser"
+msgstr "GNU bevels opsie parser"
 
 #: CDocumentation.class:117
+#, fuzzy
 msgid "Perl-compatible Regular Expression Matching"
-msgstr "-"
+msgstr "-Perl-versoenbare `Regular Expression` Vergelyking"
 
 #: CDocumentation.class:118
 msgid "PDF renderer based on Poppler library"
