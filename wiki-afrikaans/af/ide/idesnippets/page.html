@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="/home/casperl/.local/share/gambas3/wiki/style.css">
+  <title>Offline help</title>
+</head>
+
+<body>
+
+ <style type="text/css">
+.header { display: none; }
+.page { top: 0; }
+</style>
+
+
+<form name="form" method="post" enctype="multipart/form-data">
+
+<div class="header">
+  <div class="header-inside">
+    <div class="up">
+      <a href="wiki://"><img src="/home/casperl/.local/share/gambas3/wiki/up.png"></a>
+    </div>
+    <div class="title">
+      <a href="wiki://ide">/ide</a><a href="wiki://ide/idesnippets">/idesnippets</a>
+    </div>
+    <div class="login">
+      
+    </div>
+  </div>
+</div>
+
+<div class="page">
+<h1>IDE Snippets</h1>
+<div class="index">
+<ul>
+  <li>
+<p><a href="#t1">Using IDE Snippets</a></p>
+  <ul>
+    <li>
+<p><a href="#t2">Activating / Deactivating</a></p>
+    </li>
+    <li>
+<p><a href="#t3">A Few Commonly Used Examples</a></p>
+    </li>
+    </ul>
+  </li>
+  <li>
+<p><a href="#t4">Expansion Macros</a></p>
+  <ul>
+    <li>
+<p><a href="#t5">Syntax</a></p>
+    <ul>
+      <li>
+<p><a href="#t6">Trigger Strings</a></p>
+      </li>
+      <li>
+<p><a href="#t7">Expansion Macros</a></p>
+      <ul>
+        <li>
+<p><a href="#t8"><u>Literal code</u></a></p>
+        </li>
+        <li>
+<p><a href="#t9"><u>Insertion points</u></a></p>
+        </li>
+        <li>
+<p><a href="#t10"><u>Project Metadata</u></a></p>
+        </li>
+        </ul>
+      </li>
+      </ul>
+    </li>
+    </ul>
+  </li>
+  </ul></div>
+
+<p>The Gambas IDE provides a modifiable set of coding shortcuts that an ease
+typing effort in the IDE considerably. Entering a code shortcut at the beginning of a line and
+pressing the <code style="white-space:nowrap;">TAB</code> key will automatically expand the shortcut into a defined piece of code.</p>
+<p>The standard shortcuts provided with the IDE can be seen on the <strong>Code formatting</strong> tab
+of the <strong>Preferences</strong> form. At the bottom of the tab is a scrollable list of <em>trigger strings</em>
+and the associated <em>expansion macros</em>.</p>
+<a name="t1"></a><h3>Using IDE Snippets</h3>
+<a name="t2"></a><h4>Activating / Deactivating</h4>
+<p>In order to use IDE Snippets when coding, the Activate Code Snippets checkbox must be selected in the
+Preferences. If not then pressing a <code style="white-space:nowrap;">TAB</code> after entering a trigger string will simply insert a TAB character
+on the current code line.</p>
+<p>IDE Snippets expand and include the inbuilt code completion features of Gambas.</p>
+<a name="t3"></a><h4>A Few Commonly Used Examples</h4>
+<p><strong>p <code style="white-space:nowrap;">TAB</code></strong> will insert a property declaration. The cursor will be positioned at the point where the
+property name can be inserted. The selected text can simply be over-typed. Pressing <code style="white-space:nowrap;">TAB</code> again will position
+the cursor at the point for entry of the property data type. Finally pressing <code style="white-space:nowrap;">Enter</code> will commit the snippet
+expansion and return usage of the IDE editor back to its&#x27; "normal" state.</p>
+<p><strong>f <code style="white-space:nowrap;">TAB</code></strong> will insert a function declaration block. Again the cursor will be positioned for entry of the function name.
+However in this case, pressing the <code style="white-space:nowrap;">TAB</code> more times will move through the entry points for the function name, the signature,
+the return type and finally to the point of entry of your first line of code for the function. Note that in this case,
+the IDE editor has appeared to return to "normal operations". In fact, the snippet parser is still in operation and remains
+so until you move the cursor outside the function block. So, for example, if you overlooked entering the return type,
+positioning the cursor back anywhere on the declaration line and pressing <code style="white-space:nowrap;">Tab</code> will highlight that overlooked expansion
+macro token.</p>
+<p>A few other triggers you may like to investigate are:</p>
+<ul>
+  <li>
+<p>main <code style="white-space:nowrap;">TAB</code> : generates a Main sub.</p>
+  </li>
+  <li>
+<p>fe <code style="white-space:nowrap;">TAB</code> : generates a For Each ... Next block</p>
+  </li>
+  <li>
+<p>d <code style="white-space:nowrap;">TAB</code> and di <code style="white-space:nowrap;">tab</code> and other derivatives : generates Dim lines</p>
+  </li>
+  <li>
+<p>(my favorite!) gpl <code style="white-space:nowrap;">Tab</code> : generates the GPL short statement</p>
+  </li>
+  </ul>
+<p>Finally, if the initial expansion isn&#x27;t what you wanted at all, just press <code style="white-space:nowrap;">Ctrl</code> + <code style="white-space:nowrap;">z</code> to get back your original typing.</p>
+<a name="t4"></a><h3>Expansion Macros</h3>
+<p>You can define your own IDE Snippets!</p>
+<p>Again, on the <strong>Preferences</strong> form, <strong>Code formatting</strong> tab next to the list of snippets are the buttons to create, change or delete
+custom snippets (it will also let you see the standard ones in read-only mode - handy if you want to copy the existing macro).  To create a new snippet click the <code style="white-space:nowrap;">New...</code> button. You are presented with a form containing two
+controls, a textbox for entering the trigger string and an editor for entering the expansion macro.</p>
+<p>If you attempt to use a trigger string that is already defined, the IDE will pop up a balloon "This trigger string is already in use."
+when you try to save the snippet.</p>
+<a name="t5"></a><h4>Syntax</h4>
+<p>The syntax for IDE Snippets is very simple but can take some getting used to.
+There are two parts, as indicated above, the <em>trigger string</em> and the <em>expansion macro</em>.</p>
+<a name="t6"></a><h5>Trigger Strings</h5>
+<p>The trigger string can be any character string without inner spaces. <em>However</em>, it is <u>probably safer</u> to use lower case
+alpha or alpha+numeric strings. Not too difficult eh!</p>
+<a name="t7"></a><h5>Expansion Macros</h5>
+<p>Expansion macros have three aspects.</p>
+<a name="t8"></a><h6><u>Literal code</u></h6>
+<p>which is any sequence of characters and escaped characters not included below. So text like</p>
+<div><div class="box">
+  <p>If <a href="wiki://lang/isinteger">IsInteger</a>(sText) Then<br></p>
+<div><pre><code>Return False
+</code></pre></div>
+</div></div>
+<p>will be inserted <u>as is</u> including the leading spaces, newlines and tabs (that you will see as escape sequences in the Preferences list).
+In fact, inserting escape sequences in the macro should be avoided unless they are part of a literal string, as they will be double escaped in the internal macro code.</p>
+<p>(Yes, even the typo will be entered verbatim.)</p>
+<a name="t9"></a><h6><u>Insertion points</u></h6>
+<p>indicate where the cursor will be positioned after expansion. They are indicated by a sub-string <code style="white-space:nowrap;">${n:lit_token}</code> in the code where <strong><code style="white-space:nowrap;">n</code></strong> is the ordinal cursor position of the token and <strong><code style="white-space:nowrap;">lit_token</code></strong> is the text that will be displayed and highlighted for that token. So</p>
+<div><div class="box">
+ <p>? ${1:Variable}</p>
+</div></div>
+<p>will result in</p>
+<p><font style="font-family: &quot;Courier New&quot;,Courier,monospace;">  ? <font style="background-color: rgb(204, 204, 204);" color="black">Variable</font></font><br></p>
+<p>(which will automatically expand to "Print ..." when you leave that line.)</p>
+<a name="t10"></a><h6><u>Project Metadata</u></h6>
+<p>The macro expansion also allows you to insert <em>a few</em> bits of project metadata in your macro. The metadata currently available is:</p>
+<ul>
+  <li>
+<p>The project title. (use a ${n:$TITLE} token)</p>
+  </li>
+  <li>
+<p>The project description. (use a ${n:$DESCRIPTION) token), and</p>
+  </li>
+  <li>
+<p>The project author. (use a ${n:$AUTHOR} token)</p>
+  </li>
+  </ul>
+
+</div>
+
+</form>
+</body>
+</html>

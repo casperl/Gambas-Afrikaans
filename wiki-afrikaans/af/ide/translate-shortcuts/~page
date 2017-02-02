@@ -1,0 +1,47 @@
+# Translation dialog shortcuts
+
+[[
+Key
+--
+Action
+==
+'CTRL' + 'F'
+--
+Enter a string to search.
+==
+'F3'
+--
+Search a string inside the translation file.
+==
+'F4'
+--
+Find next untranslated string.
+==
+'SHIFT' + 'F4'
+--
+Find previous untranslated string.
+==
+'F5'
+--
+Use the current untranslated string as translation.
+==
+'F6'
+--
+The current string must not be translated.
+==
+'F7'
+--
+Verify all the translation.
+==
+'F8'
+--
+Clear the current translated string.
+==
+'ALT' + 'UP'
+--
+Previous translation.
+==
+'ALT' + 'DOWN'
+--
+Next translation.
+]]

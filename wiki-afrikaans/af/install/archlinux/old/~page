@@ -1,0 +1,33 @@
+# ArchLinux (deprecated)
+
+## Installing from the official repositories
+
+    $ sudo pacman -S gambas3
+
+## Installing from a stable source archive
+
+### 1. Install the development packages as root
+
+#### Updated for Release: 3.2.1
+    $ sudo pacman -S automake autoconf gcc intltool intltool mysql postgresql libffi bzip2 glib2 v4l-utils zlib mesa libgl glew xdg-utils gtk2 imlib2 gdk-pixbuf2 postgresql-libs libmysqlclient unixodbc sqlite2 sqlite librsvg curl poppler-glib sdl_mixer sdl_ttf libxtst pcre qtwebkit libxcursor libsm dbus-core libxml2 libxslt libgnome-keyring gsl gstreamer0.10 gstreamer0.10-base gtkglext ncurses llvm
+
+[[ warning
+If you use a proprietary video driver (e.g. the NVIDIA binary blob or Catalyst) remove libgl from the dependencies above, as it will cause conflicts.
+]]
+
+### 2. Download a source package
+At [http://downloads.sourceforge.net/gambas/gambas3-3.2.1.tar.bz2] for example.
+
+    $ tar xfj gambas3-3.2.1.tar.bz2
+    $ cd gambas3-3.2.1
+#### ...or check out the tag of the current stable version
+You need the 'svn' client (a simple '$ pacman -S subversion' to install it).
+
+    $ mkdir trunk
+    $ svn checkout https://gambas.svn.sourceforge.net/svnroot/gambas/gambas/tags/3.2.1
+    $ cd trunk
+### 3. Compile and install it
+    $ ./reconf-all
+    $ ./configure -C
+    $ make
+    $ sudo make install

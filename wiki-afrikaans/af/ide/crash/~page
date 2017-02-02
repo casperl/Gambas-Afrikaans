@@ -1,0 +1,30 @@
+# The Program has stopped unexpectedly!
+
+This message is displayed by the Development Environment when the running project crashes.
+
+This is not a bug in your project, but a bug in the interpreter. This message should never occur, but nothing is perfect is this world!
+
+What you can try before reporting the bug:
+
+* Check your Gambas version, and try to install the latest one provided by your distribution.
+
+* If you have already the latest version provided by your distribution, try to compile the version located in the subversion repository.
+
+## Automatic report by mail
+
+Since Gambas 3.5, the IDE now displays a dialog when a crash occurs that allows you to send a bug report by mail.
+
+The bug report will include:
+
+* An archive of the project sources.
+* The contents of the IDE system information dialog.
+* Your project configuration file.
+
+Moreover, if core dumps have been enabled before the crash, and if 'gdb' is installed on your system, a stack backtrace will be added.
+This is almost mandatory for debugging, so do not hesitate to install gdb and to enable core dumps!
+
+[./dialog.png]
+
+## Reporting the bug manually
+
+If everything fails, you <s>must</s> should report the bug, as explained on the [/doc/report] page.

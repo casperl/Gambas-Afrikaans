@@ -1,0 +1,589 @@
+# Wiki Manual
+
+@{index}
+
+## [Overview]
+
+This wiki is made of *pages*, each page being made of:
+* A path.
+* A title.
+* A content.
+
+The path uniquely identifies the page, and defines the [../comp/gb.web/url] to access it.
+For example, a page with the '/lang/open' path is accessed with the 'http://gambasdoc.org/help/lang/open' URL.
+
+Even if the Gambas documentation is ordered as a tree, there are no "Level Up" buttons in all the documents. To go one level up, use the address bar of your browser, and delete the very last word. For example from page 'http://gambasdoc.org/help/lang/open' goto page 'http://gambasdoc.org/help/lang'
+
+The page contents must follow the syntax described in the \'Wiki syntax\' chapter below.
+
+The title is used for displaying a link to a page, and does not follow the previous syntax.
+It is displayed \'as is\'.
+
+When there is a link on a non-existing page, the link text is the path of the page, displayed in italic.
+
+### [Path conventions]
+
+The page path is theoretically free, but must follow this convention:
+
+* All language-related pages are put in '/lang', for keywords and functions, and in '/cat', for overviews.
+* All components-related pages are put in '/comp'. The path of a component page is '/comp/gb.xxx/class/symbol'. The symbol begins with a dot if it is a class event.
+* All pages under '/def' path make the lexicon.
+* Miscellaneous documents should be put under the '/doc' path.
+
+### [How to edit an already existing page]
+
+Click on the \'Edit\' link on the top of the page.
+
+A [../comp/gb.form/dialog] box appears where you must enter your login and your password.
+This dialog box appears only once for each session.
+
+Then you can edit the page and its title by following the \'Wiki syntax\'.
+Don\'t change the title of class, method, event or constant pages, as they
+are automatically generated.
+
+It may be useful to save the original content of the edit window into a usual editor, e.g. gedit (or Notepad) by cut and paste.
+
+Once edited, click on the \'Save\' button to update the page.
+
+### [How to create a new page]
+
+Enters a new page [../comp/gb.web/url] in your browser. The Wiki will tell you that the page does not exist,
+and will display a \'Create\' link on top of the page.
+
+Click on the \'Create\' link.
+
+### [How to delete a page]
+
+Edit the page you want to delete, and click on the \'Delete\' button.
+
+### [How to translate a page in your language]
+
+Just edit the page, but check that you are currently viewing the page in the correct language,
+by looking at the little flag on the top-left of the page.
+
+If there is no flag that represents your language, just tell me. I will add it.
+
+[[ warning
+Only translate page titles and contents. **Do not** translate link and page names!
+]]
+
+### [How to translate the wiki predefined strings]
+
+The wiki predefined strings, i.e. everything that is not a page title or a page content, is located
+in the CGI script project that manages this wiki.
+
+The source of this project is located in the Gambas source archive, with the IDE and the database component. Its name is \''doc.cgi'\'. Just translate it like any other project, and send me the translation.
+
+### [Image pages]
+
+You can upload images to the wiki. An image is a page whose last path element, i.e. the path name, begins with a colon.
+
+For example, '/control/:combobox' is an image that represents a combo-box control.
+
+To insert an image inside a normal page, just make a link: '\[/control/:combobox]'.
+
+### [Symbolic links]
+
+Pages whose title begins with the \''@'\' character are actually just a link to another page.
+The path of the linked page is specified just after the \''@'\' character.
+
+For example, The '[/cat/methoddecl] (/cat/methoddecl)' page is actually a link to the '[/lang/methoddecl] (/lang/methoddecl)' page,
+and the title of the '/cat/methoddecl' page is '@/lang/methoddecl'.
+
+## [Wiki Syntax]
+
+Here is a brief overview of the syntax you must use to write articles on this wiki.
+
+### [Formatting characters]
+
+[[
+Syntax
+--
+Description
+--
+Result
+==
+'**\**Bold*\***'
+--
+Put text in bold.
+--
+**Bold**
+==
+'**/*Italic*/**'
+--
+Put text in italic.
+--
+*Italic*
+==
+'**=*TypeWriter*=**'
+--
+Use a non proportional font.
+--
+'TypeWriter'
+==
+'**_*Underline*_**'
+--
+Underlines text.
+--
+~Underline~
+]]
+
+[[ warning
+If a character precedes a space, it cannot be a beginning formatting character.
+And if a character follows a space, it cannot be an ending character.
+
+[[ box
+'/ \*Gambas\* =Already= _Means_ BASIC! /'
+]]
+
+prints
+[[ box
+/ **Gambas** 'Already' ~Means~ BASIC! /
+]]
+
+and not
+[[ box
+***Gambas** 'Already' ~Means~ BASIC!*
+]]
+]]
+
+
+[[ info
+The [../comp/gb.web/html] markup are kept, they are not interpreted by the wiki.
+
+[[
+If you type...
+--
+You get...
+==
+'M\<sup>rs\</sup> \<font color="red">Pierce\</font>'
+--
+M<sup>rs</sup> <font color="red">Pierce</font>
+]]
+]]
+
+[[ info
+If you want to use a special character normally, or if you want to not
+insert [../comp/gb.web/html] markups, precede them by the backslash escape character '\'\\\''.
+
+[[
+If you type...
+--
+You get...
+==
+'**\\\**Bold*\\\***'
+--
+\*Bold\*
+==
+'Don\'t do \\\<\\\<that>>!'
+--
+Don\'t do \<\<that>>!
+]]
+]]
+
+### [Titles, Paragraphs & Lines]
+
+To jump a line on the final result, i.e. to start a new paragraph, you must insert a blank line.
+
+[[ title gray
+Example
+]]
+[[ width="100%"
+If you type...
+--
+You get...
+==
+'Gambas Already'<br/>
+'Means BASIC!'
+--
+Gambas Already Means BASIC!
+==
+'Gambas Already'<br/><br/>
+'Means BASIC!'
+--
+Gambas Already
+
+Means BASIC!
+]]
+
+If you ends a line with an underscore, then a line break in inserted.
+
+[[ title gray
+Example
+]]
+[[ width="100%"
+If you type...
+--
+You get...
+==
+'Gambas Already_'<br/>
+'Means BASIC!'
+--
+Gambas Already\
+Means BASIC!
+]]
+
+[[ warning
+You can use the following special characters only at the beginning of a line.
+]]
+
+[[
+Syntax
+--
+Description
+--
+Result
+==
+'+Title'<br/>
+--
+Displays a big title.
+--
+## [Title]
+==
+'++Title'<br/>
+--
+Displays a smaller title.
+--
+### [Title]
+==
+'+++Title'<br/>
+--
+And so on...
+--
+#### [Title]
+==
+'++++Title'<br/>
+--
+&nbsp;
+--
+##### [Title]
+==
+\--
+--
+Horizontal line
+--
+----
+==
+'==\
+\<u\>This is \*verbatim\* text\</u\>\
+===
+--
+Verbatim text. Note that the HTML markups **are** now interpreted.
+--
+    <u>This is *verbatim* text</u>
+]]
+
+### [Tables]
+
+You can use the following special characters only at the beginning of a line.
+
+[[
+Syntax
+--
+Description
+==
+'[[=
+--
+Begins a table.
+==
+']]'
+--
+Ends a table.
+==
+'][=
+--
+Separates two rows.
+==
+'-'
+--
+Separates two columns.
+]]
+
+The first row is always the headers. If the first row is void, then no header is printed.
+
+[[ title gray
+Example
+]]
+[[ width="100%"
+If you type...
+--
+You get...
+--
+If you type...
+--
+You get...
+==
+'\[\[<br/>
+First header<br/>
+\-<br/>
+Second header<br/>
+\-<br/>
+Third header<br/>
+\][<br/>
+1<br/>
+\-<br/>
+2<br/>
+\-<br/>
+3<br/>
+\][<br/>
+4<br/>
+\-<br/>
+5<br/>
+\-<br/>
+6<br/>
+\]]=
+--
+[[
+First header
+--
+Second header
+--
+Third header
+==
+1
+--
+2
+--
+3
+==
+4
+--
+5
+--
+6
+]]
+--
+'\[\[<br/>
+\][<br/>
+1<br/>
+\-<br/>
+2<br/>
+\-<br/>
+3<br/>
+\][<br/>
+4<br/>
+\-<br/>
+5<br/>
+\-<br/>
+6<br/>
+\]]=
+--
+[[
+==
+1
+--
+2
+--
+3
+==
+4
+--
+5
+--
+6
+]]
+]]
+
+### [Links]
+
+This wiki has a autolink feature. The only way to disable it is the backslash escape character!
+
+[[
+Syntax
+--
+Description
+--
+Result
+==
+'\[/lang/arithop]'
+--
+Link to a topic
+--
+[/lang/arithop]
+==
+'\[http://gambas.sourceforge.net|Gambas web site]'
+--
+Link to any [../comp/gb.web/url]
+--
+[Gambas web site] (http://gambas.sourceforge.net)
+==
+'What is ASCII ?'
+--
+Autolink
+--
+What is ASCII ?
+==
+'What is \\ASCII ?'
+--
+How to disable Autolink
+--
+What is ASCII ?
+]]
+
+[[ info
+If a page title begins with a '\'@\'' character, then it is considered as a symbolic link to the real page
+whose path is given by the rest of the title.
+Edit this [page] (/cat/arithop) to understand.
+]]
+
+### [Special Sections]
+
+A section starts with a line beginning with a '\'{\'' character, and ends with a line beginning with a '\'}\'' character.
+
+Sections can be nested.
+
+[[
+If you type...
+--
+You get...
+--
+Notes
+==
+'{syntax<br/>
+This is the syntax of a function<br/>
+\}=
+--
+[[ syntax
+This is the syntax of a function
+]]
+--
+
+==
+'{example\
+Example\
+\}=
+--
+### Examples
+[[ code gambas
+Example
+]]
+--
+
+==
+'{seealso\
+See also these functions...\
+\}=
+--
+### See also
+[[ seealso
+See also these functions...
+]]
+--
+
+==
+'{box\
+Just a box\
+\}=
+--
+[[ box
+Just a box
+]]
+--
+In this box all special characters as / _ etc are interpreted
+==
+'{code\
+for code examples\
+\}=
+--
+    for code examples
+--
+In this box all special characters as / _ etc are displayed, not interpreted
+==
+'{warning\
+Warning!\
+\}=
+--
+[[ warning
+Warning!
+]]
+--
+
+==
+'{info\
+Note that point.\
+\}=
+--
+[[ info
+Note that point.
+]]
+--
+
+==
+'{vb\
+Visual Basic does not work like Gambas.\
+\}=
+--
+[[ vb
+Visual Basic does not work like Gambas.
+]]
+--
+
+==
+'{tip\
+A tip may help you.\
+\}=
+--
+[[ tip
+A tip may help you.
+]]
+--
+
+==
+'{only 2.0\
+Contents that will be only displayed on Gambas 2 pages.\
+\}=
+--
+
+--
+
+==
+'{only 3.0\
+Contents that will be only displayed on Gambas 3 pages.\
+\}=
+--
+Contents that will be only displayed on Gambas 3 pages.
+
+--
+]]
+
+[[ warning
+Beware of the following points:
+* Have a line break (an empty line) before and after such boxes.
+* Do not use line breaks inside a seealso box
+* With {syntax...} section, you could need to add the 'no-title' keyword to avoid printing of the title of the page before the section.
+]]
+
+### [Special Commands]
+
+A special command is a line beginning with a '\'@\'' character.
+
+[[
+Special command
+--
+Description
+==
+'@components'
+--
+Inserts the list of all components.
+==
+'@classes'
+--
+Inserts the list of all classes of the current component.
+==
+'@symbols'
+--
+Inserts the list of all symbols of the current class.
+==
+'@index /root/index/path'
+--
+Creates an index of all pages of the specified root path. Only the first level pages are indexed.
+==
+'@title-index'
+--
+Creates an index of all titles included in the page. Titles inside sections or tables are ignored. Note that this keyword must be inserted before any title, usually on top of the page.
+==
+'@since 3.5'
+--
+Inserts a box to warn the user that this feature exists only since a specific version of Gambas \(here: 3.5).
+
+]]

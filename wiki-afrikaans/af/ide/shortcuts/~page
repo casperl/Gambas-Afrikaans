@@ -1,0 +1,291 @@
+# Editor Shortcuts
+
+[[
+Key
+--
+Action
+==
+'UP'
+--
+Move the cursor one line up.¹
+
+Text is unselected.
+==
+'CTRL' + 'UP'
+--
+Move the cursor one procedure up.¹
+
+Text is unselected.
+==
+'ALT' + 'UP'
+--
+Exchange the current line with the previous line, and move the cursor one line up.
+
+If text is selected, move the selection one line up.
+==
+'DOWN'
+--
+Move the cursor one line down.¹
+
+Text is unselected.
+==
+'CTRL' + 'DOWN'
+--
+Move the cursor one procedure down.¹
+
+Text is unselected.
+==
+'ALT' + 'DOWN'
+--
+Exchange the current line with the next line, and move the cursor one line down.
+
+If text is selected, move the selection one line down.
+==
+'LEFT'
+--
+Move the cursor one character left.¹
+
+Text is unselected.
+==
+'CTRL' + 'LEFT'
+--
+Move the cursor one word left.¹
+
+Text is unselected.
+==
+'RIGHT'
+--
+Move the cursor one character right.¹
+
+Text is unselected.
+==
+'CTRL' + 'RIGHT'
+--
+Move the cursor one word right.¹
+
+Text is unselected.
+==
+'HOME'
+--
+Move the cursor to the beginning of the line.¹
+The indentation is taken into account.
+
+Text is unselected.
+==
+'CTRL' + 'HOME'
+--
+Move the cursor to the beginning of the file.
+
+Text is unselected.
+==
+'ALT' + 'HOME'
+--
+Move the cursor to the first previous non-void line having the same indentation level.¹
+
+Text is unselected.
+==
+'END'
+--
+Move the cursor to the end of the line.¹
+
+Text is unselected.
+==
+'CTRL' + 'END'
+--
+Move the cursor to the end of the file.
+
+Text is unselected.
+==
+'ALT' + 'END'
+--
+Move the cursor to the first next non-void line having the same indentation level.¹
+
+Text is unselected.
+==
+'ENTER' or 'RETURN'
+--
+Insert a new line, with eventually some automatic insertion.²
+
+Selected text is deleted.
+==
+'BACKSPACE'
+--
+Delete one character left, and move the cursor accordingly.
+
+Selected text is deleted.
+==
+'CTRL' + 'BACKSPACE'
+--
+Delete one word left, and move the cursor accordingly.
+
+Selected text is deleted.
+==
+'DELETE'
+--
+Delete one character right, but do not move the cursor.
+
+Selected text is deleted.
+==
+'CTRL' + 'DELETE'
+--
+Delete one word right, but do not move the cursor.
+
+Selected text is deleted.
+==
+'PAGE UP'
+--
+Move the cursor one page up.¹
+
+Text is unselected.
+==
+'CTRL' + 'PAGE UP'
+--
+Switch to the previous edited file.
+==
+'PAGE DOWN'
+--
+Move the cursor one page down.¹
+
+Text is unselected.
+==
+'CTRL' + 'PAGE DOWN'
+--
+Switch to the next edited file.
+==
+'TAB'
+--
+Insert a tab character if no text is selected.
+
+Otherwise, the selected text is indented.
+
+Note: If the 'TAB' key is pressed at the end of a line that consists only
+of an [/ide/idesnippets], then the shortcut is expanded.
+==
+'SHIFT' + 'TAB'
+--
+Do nothing if no text is selected.
+
+Otherwise, the selected text is unindented.
+==
+'INSERT'
+--
+Toggle the editor insertion / block selection mode.
+==
+'CTRL' + 'A'
+--
+Select all text.
+==
+'CTRL' + 'B'
+--
+Toggle a bookmark.
+==
+'CTRL' + 'C'
+--
+Copy the selected text to the clipboard.
+==
+'CTRL' + 'D'
+--
+Delete the current line.
+==
+'CTRL' + 'G'
+--
+Move the cursor to a specific line.
+
+Text is unselected.
+==
+'CTRL' + 'H'
+--
+Toggle horizontal editor split.
+==
+'CTRL' + 'J'
+--
+Toggle vertical editor split.
+==
+'CTRL' + 'K'
+--
+The current line is commented if no text is selected.
+
+Otherwise, the selected text is commented.
+==
+'CTRL' + 'S'
+--
+Save the current edited file.
+==
+'ALT' + 'S'
+--
+Define the current file as startup class.
+==
+'CTRL' + 'U'
+--
+The current line is uncommented if no text is selected.
+
+Otherwise the selected text is uncommented.
+==
+'CTRL' + 'V'
+--
+Paste the clipboard contents.
+
+The selected text is deleted.
+==
+'CTRL' + 'SHIFT' + 'V'
+--
+Open the paste special dialog to paste the clipboard contents in a specific way.
+
+The selected text is deleted.
+==
+'CTRL' + 'X'
+--
+Delete the selected text and copy it to the clipboard.
+==
+'CTRL' + 'Y'
+--
+Redo the last undone change.
+==
+'CTRL' + 'Z'
+--
+Undo the last change.
+==
+'ALT' + '(' or 'ALT' + ')'
+--
+Insert '(' and ')' around the current word or remove them if they are present.
+==
+'ALT' + `[` or 'ALT' + `]`
+--
+Insert `[` and ']' around the current word or remove them if they are present.
+==
+'ALT' + '{' or 'ALT' + '}'
+--
+Insert '{' and '}' around the current word or remove them if they are present.
+==
+'ALT' + `<` or 'ALT' + `>`
+--
+Insert '<' and '>' around the current word or remove them if they are present.
+==
+'F2'
+--
+Find symbol definition.
+==
+'F3'
+--
+Find next search occurrence.
+==
+'SHIFT' + 'F3'
+--
+Find previous search occurrence.
+==
+'F12'
+--
+Switch between form editor and code editor.
+]]
+
+[[ no-border
+==
+¹
+--
+*Press 'SHIFT' to select the text at the same time.*
+==
+²
+--
+*An example being at the end of a property declaration: the relevant accessor code is inserted at the end of the code.*
+*Pressing 'SHIFT' disables the automatic insertion.
+]]

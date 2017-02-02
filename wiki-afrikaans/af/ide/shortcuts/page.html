@@ -1,0 +1,355 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="/home/casperl/.local/share/gambas3/wiki/style.css">
+  <title>Offline help</title>
+</head>
+
+<body>
+
+ <style type="text/css">
+.header { display: none; }
+.page { top: 0; }
+</style>
+
+
+<form name="form" method="post" enctype="multipart/form-data">
+
+<div class="header">
+  <div class="header-inside">
+    <div class="up">
+      <a href="wiki://"><img src="/home/casperl/.local/share/gambas3/wiki/up.png"></a>
+    </div>
+    <div class="title">
+      <a href="wiki://ide">/ide</a><a href="wiki://ide/shortcuts">/shortcuts</a>
+    </div>
+    <div class="login">
+      
+    </div>
+  </div>
+</div>
+
+<div class="page">
+<h1>Editor Shortcuts</h1>
+<table class="table">
+<tr><th>
+<p>Key</p>
+</th><th>
+Action
+</th></tr>
+<tr><td>
+<code style="white-space:nowrap;">UP</code>
+</td><td>
+Move the cursor one line up.¹
+<p>Text is unselected.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">UP</code>
+</td><td>
+Move the cursor one procedure up.¹
+<p>Text is unselected.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">ALT</code> + <code style="white-space:nowrap;">UP</code>
+</td><td>
+Exchange the current line with the previous line, and move the cursor one line up.
+<p>If text is selected, move the selection one line up.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">DOWN</code>
+</td><td>
+Move the cursor one line down.¹
+<p>Text is unselected.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">DOWN</code>
+</td><td>
+Move the cursor one procedure down.¹
+<p>Text is unselected.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">ALT</code> + <code style="white-space:nowrap;">DOWN</code>
+</td><td>
+Exchange the current line with the next line, and move the cursor one line down.
+<p>If text is selected, move the selection one line down.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">LEFT</code>
+</td><td>
+Move the cursor one character left.¹
+<p>Text is unselected.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">LEFT</code>
+</td><td>
+Move the cursor one word left.¹
+<p>Text is unselected.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">RIGHT</code>
+</td><td>
+Move the cursor one character right.¹
+<p>Text is unselected.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">RIGHT</code>
+</td><td>
+Move the cursor one word right.¹
+<p>Text is unselected.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">HOME</code>
+</td><td>
+Move the cursor to the beginning of the line.¹
+The indentation is taken into account.
+<p>Text is unselected.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">HOME</code>
+</td><td>
+Move the cursor to the beginning of the file.
+<p>Text is unselected.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">ALT</code> + <code style="white-space:nowrap;">HOME</code>
+</td><td>
+Move the cursor to the first previous non-void line having the same indentation level.¹
+<p>Text is unselected.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">END</code>
+</td><td>
+Move the cursor to the end of the line.¹
+<p>Text is unselected.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">END</code>
+</td><td>
+Move the cursor to the end of the file.
+<p>Text is unselected.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">ALT</code> + <code style="white-space:nowrap;">END</code>
+</td><td>
+Move the cursor to the first next non-void line having the same indentation level.¹
+<p>Text is unselected.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">ENTER</code> or <code style="white-space:nowrap;">RETURN</code>
+</td><td>
+Insert a new line, with eventually some automatic insertion.²
+<p>Selected text is deleted.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">BACKSPACE</code>
+</td><td>
+Delete one character left, and move the cursor accordingly.
+<p>Selected text is deleted.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">BACKSPACE</code>
+</td><td>
+Delete one word left, and move the cursor accordingly.
+<p>Selected text is deleted.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">DELETE</code>
+</td><td>
+Delete one character right, but do not move the cursor.
+<p>Selected text is deleted.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">DELETE</code>
+</td><td>
+Delete one word right, but do not move the cursor.
+<p>Selected text is deleted.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">PAGE UP</code>
+</td><td>
+Move the cursor one page up.¹
+<p>Text is unselected.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">PAGE UP</code>
+</td><td>
+Switch to the previous edited file.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">PAGE DOWN</code>
+</td><td>
+Move the cursor one page down.¹
+<p>Text is unselected.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">PAGE DOWN</code>
+</td><td>
+Switch to the next edited file.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">TAB</code>
+</td><td>
+Insert a tab character if no text is selected.
+<p>Otherwise, the selected text is indented.</p>
+<p>Note: If the <code style="white-space:nowrap;">TAB</code> key is pressed at the end of a line that consists only
+of an <a href="wiki://ide/idesnippets">IDE Snippets</a>, then the shortcut is expanded.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">SHIFT</code> + <code style="white-space:nowrap;">TAB</code>
+</td><td>
+Do nothing if no text is selected.
+<p>Otherwise, the selected text is unindented.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">INSERT</code>
+</td><td>
+Toggle the editor insertion / block selection mode.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">A</code>
+</td><td>
+Select all text.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">B</code>
+</td><td>
+Toggle a bookmark.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">C</code>
+</td><td>
+Copy the selected text to the clipboard.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">D</code>
+</td><td>
+Delete the current line.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">G</code>
+</td><td>
+Move the cursor to a specific line.
+<p>Text is unselected.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">H</code>
+</td><td>
+Toggle horizontal editor split.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">J</code>
+</td><td>
+Toggle vertical editor split.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">K</code>
+</td><td>
+The current line is commented if no text is selected.
+<p>Otherwise, the selected text is commented.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">S</code>
+</td><td>
+Save the current edited file.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">ALT</code> + <code style="white-space:nowrap;">S</code>
+</td><td>
+Define the current file as startup class.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">U</code>
+</td><td>
+The current line is uncommented if no text is selected.
+<p>Otherwise the selected text is uncommented.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">V</code>
+</td><td>
+Paste the clipboard contents.
+<p>The selected text is deleted.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">SHIFT</code> + <code style="white-space:nowrap;">V</code>
+</td><td>
+Open the paste special dialog to paste the clipboard contents in a specific way.
+<p>The selected text is deleted.</p>
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">X</code>
+</td><td>
+Delete the selected text and copy it to the clipboard.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">Y</code>
+</td><td>
+Redo the last undone change.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">CTRL</code> + <code style="white-space:nowrap;">Z</code>
+</td><td>
+Undo the last change.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">ALT</code> + <code style="white-space:nowrap;">(</code> or <code style="white-space:nowrap;">ALT</code> + <code style="white-space:nowrap;">)</code>
+</td><td>
+Insert <code style="white-space:nowrap;">(</code> and <code style="white-space:nowrap;">)</code> around the current word or remove them if they are present.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">ALT</code> + <code style="white-space:nowrap;">[</code> or <code style="white-space:nowrap;">ALT</code> + <code style="white-space:nowrap;">]</code>
+</td><td>
+Insert <code style="white-space:nowrap;">[</code> and <code style="white-space:nowrap;">]</code> around the current word or remove them if they are present.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">ALT</code> + <code style="white-space:nowrap;">{</code> or <code style="white-space:nowrap;">ALT</code> + <code style="white-space:nowrap;">}</code>
+</td><td>
+Insert <code style="white-space:nowrap;">{</code> and <code style="white-space:nowrap;">}</code> around the current word or remove them if they are present.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">ALT</code> + <code style="white-space:nowrap;">&lt;</code> or <code style="white-space:nowrap;">ALT</code> + <code style="white-space:nowrap;">&gt;</code>
+</td><td>
+Insert <code style="white-space:nowrap;">&lt;</code> and <code style="white-space:nowrap;">&gt;</code> around the current word or remove them if they are present.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">F2</code>
+</td><td>
+Find symbol definition.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">F3</code>
+</td><td>
+Find next search occurrence.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">SHIFT</code> + <code style="white-space:nowrap;">F3</code>
+</td><td>
+Find previous search occurrence.
+</td></tr>
+<tr><td>
+<code style="white-space:nowrap;">F12</code>
+</td><td>
+Switch between form editor and code editor.
+</td></tr>
+</table>
+<table class="no-border">
+<tr><td>
+¹
+</td><td>
+<em>Press <code style="white-space:nowrap;">SHIFT</code> to select the text at the same time.</em>
+</td></tr>
+<tr><td>
+²
+</td><td>
+<em>An example being at the end of a property declaration: the relevant accessor code is inserted at the end of the code.</em>
+<em>Pressing <code style="white-space:nowrap;">SHIFT</code> disables the automatic insertion.</em>
+</td></tr>
+</table>
+
+</div>
+
+</form>
+</body>
+</html>

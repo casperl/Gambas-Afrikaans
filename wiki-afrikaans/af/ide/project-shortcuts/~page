@@ -1,0 +1,95 @@
+# Project shortcuts
+
+[[
+Key
+--
+Action
+==
+'CTRL' + 'N'
+--
+Create a new project.
+==
+'CTRL' + 'O'
+--
+Open a project.
+==
+'CTRL' + 'P'
+--
+Open the project properties dialog.
+==
+'CTRL' + 'Q'
+--
+Quit the IDE.
+==
+'CTRL' + 'S'
+--
+Save the current edited file.
+==
+'ALT' + 'S'
+--
+Define the current file as startup class.
+==
+'CTRL' + 'T'
+--
+Open the translation dialog.
+==
+'CTRL' + 'ALT' + 'A'
+--
+Create a source archive of the project.
+==
+'CTRL' + 'ALT' + 'I'
+--
+Open the wizard project packager.
+==
+'CTRL' + 'ALT' + 'M'
+--
+Toggle the menu bar.
+==
+'CTRL' + 'ALT' + 'O'
+--
+Open a file browser on the project directory.
+==
+'CTRL' + 'ALT' + 'P'
+--
+Open the IDE configuration dialog.
+==
+'CTRL' + 'ALT' + 'S'
+--
+Save the entire project.
+==
+'CTRL' + 'ALT' + 'SHIFT' + 'S'
+--
+Save a copy of the entire project under a new name.
+==
+'CTRL' + 'ALT' + 'T'
+--
+Open a terminal on the project directory.
+==
+'CTRL' + 'ALT' + 'W'
+--
+Close all opened editor windows.
+==
+'CTRL' + 'ALT' + 'X'
+--
+Create project executable.
+==
+'CTRL' + 'PGDOWN'
+--
+Switch to next editor window.
+==
+'CTRL' + 'PGUP'
+--
+Switch to previous editor window.
+==
+'F4'
+--
+Toggle the form editor property sheet.
+==
+'F10'
+--
+Toggle the project tree view.
+==
+'F11'
+--
+Show or hide the console output window.
+]]

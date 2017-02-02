@@ -1,0 +1,228 @@
+# OpenSUSE 10.2
+
+Gambas works well on openSUSE. You can have both Gambas 1 and 2 installed and they will happily work side by side. The best method is to compile Gambas from source. But first you need to make sure all the required dependencies (with their devel packages) are installed. For this it is best to use the openSUSE Administrator Settings tool YaST. Installing dependencies using YaST means you will not have version conflicts in any of your other applications.
+
+[[ info
+The instruction here apply to the 32 bit version of openSUSE.
+]]
+
+If you really do not like idea of compiling from source then the Gambas source forge site lists
+    ftp://ftp.gwdg.de/pub/linux/misc/suser-gbv/rpms/
+as a source for openSUSE binary packages. Though I did not find the install help very useful there. So press on - this install help is more detailed.
+
+
+## Step 0: Deleting the openSUSE version of Gambas
+
+The openSUSE Linux distribution has got a lot of things right. Alas Gambas is not one of them. The [Gambas source forge] (http://gambas.sourceforge.net/download.html) site suggests you do not use the version that comes with openSUSE. This is because they do not follow the Gambas specification.
+
+It is best to make sure the openSUSE version of Gambas is not installed before you try installing any other version. I have known the openSUSE version of Gambas to cause conflicts with the compiled version. Also you will not be able to use the Gambas stable version at all if the openSUSE version is installed.
+
+So it is best first to check Gambas is not installed. Open the **Administrator Settings** tool **YaST**. You will find this in the SUSE menu under **System**. When this tool starts you will be asked to enter the root password for your workstation. When YaST opens on the right panel are the available YaST administration modules. These are arranged by type and the different types of modules are listed in the left panel.
+
+We will be using the **Software Management** module that is in the **Software** type tab. So click on the the **Software Management** icon (you only need to single click). You will then need to wait while this module initializes its sources.
+
+The YaST  **Software Management** module should open on the Search filter. If it does not show Search then click on the **Filter** drop down box and select **Search**. Then in search text box enter 'gambas' and click on the **Search** button. This will list all of the openSUSE packages for Gambas. *Make sure none of the packages are checked.* If no Gambas items are installed then you can proceed to Step 1.
+
+If some Gambas items are installed then click on each item and select **Delete** from the list. When all installed Gambas items show a little dustbin icon on the entry then click on the **Accept** button in the bottom right of the screen and follow the dialogue. When it comes to asking if you want to install more packages you can answer yes if you are proceeding on to Step 1. Or answer no if you want a cup of tea. But then you will have to start YaST again.
+
+## Step 1: Adding Gambas dependencies
+
+Of all the steps in installing any application on Linux, this is the one that causes the most problems. On openSUSE it is best to make sure that all dependencies are installed through YaST Software Management tool. You will then ensure that there are no conflicts with other application you might wish to run on your openSUSE system.
+
+The first step is to make sure we have required repositories set up in YaST. Under the filter drop down list select "Installation Sources". Then check you have
+    http://download.opensuse.org/distribution/10.2/repo/oss
+as a URL. You need to adjust this URL to fit the version of openSUSE you are using. Here we assume version openSUSE 10.2. There are packages in this repositories that are required for some of the Gambas components and they are not on the install CD\'s. If you do not see this repositories then you will need to add or enable it in the main **Administrator Settings** tool  YaST panel option "Installation Source". On my system openSUSE had added the URL but it had not enabled it.
+
+Now back in the **Software Management** module  of the YaST **Administrator Settings** tool we need to check the the following dependencies. Many of which are optional.
+
+### Install Tools
+
+From the filter drop down list select **Patterns** then find the "Development" section in the list. Now under "Basic Development" make sure at least
+* autoconf
+* automake
+* gcc
+* gcc-c++
+* make
+are selected then install these.
+
+### Graphical User Interface
+
+For the  **[../../comp/gb.qt4]** and **[../../comp/gb.qt.ext]** components search from the filter drop down list select **Search** then do a search for 'qt3'. Make sure at least the following packages are installed:
+* qt3
+* qt3-devel
+* qt3-static
+You will need these components if you want to use the Gambas IDE on your workstation.
+
+### Graphical User Interface (optional)
+
+For the  **[../../comp/gb.gtk]** component search for the following packages and install them:
+* gtk2
+* gtk2-devel
+* atk
+* atk-devel
+* pango
+* pango-devel
+* cairo
+* cairo-devel
+* glib2
+* glib-devel
+* freetype2
+* freetype2-devel
+* fontconfig
+* fontconfig-devel
+
+For the  **[../../comp/gb.gtk.svg]** component search for the following packages and install them:
+* librsvg
+* librsvg-devel
+
+For the  **[../../comp/gb.pdf]** component search for the following packages and install them:
+* poppler
+* poppler-devel
+
+For the  **[../../comp/gb.pcre]** component for the following packages and install them:
+* pcre
+* pcre-devel
+
+### Desktop (optional)
+
+For the  **[../../comp/gb.qt.kde]** and **[../../comp/gb.qt.kde.html]** components search for the following packages and install them:
+* kdelibs3
+* kdelibs3-devel
+
+### Communication & Network (optional)
+
+TODO [../../comp/gb.corba]
+
+For the  **[../../comp/gb.ldap]** component search for the following packages and install them:
+* openldap2-client
+* openldap2-devel
+
+For the  **[../../comp/gb.net.curl]** component search for the following packages and install them:
+* curl
+* curl-devel
+
+### Database (optional)
+
+To use the **SQLite** database in the **[../../comp/gb.db]** component search for the following packages and install them:
+* sqlite2
+* sqlite2-devel
+* sqlite
+* sqlite-devel
+
+To use the **MySQL** database in the **[../../comp/gb.db]** component search for the following packages and install them:
+
+* mysql-client
+* mysql-devel
+* mysql-shared
+
+To use the **PostgreSQL** database in the **[../../comp/gb.db]** component search for the following packages and install them:
+* libpqxx
+* postgresql
+* postresql-devel
+* postgresql-server
+* postresql-libs
+
+To use the **ODBC** database in the **[../../comp/gb.db]** component search for the following packages and install them:
+* unixODBC
+* unixODBC-devel
+
+### XML programming (optional)
+
+For the  **[../../comp/gb.xml]**, **[../../comp/gb.xml.xslt]** and **[../../comp/gb.xml.rpc]** components search for the following packages and install them:
+* libxml2
+* libxml2-devel
+* libxslt
+* libxslt-devel
+
+### Compression & Crypting (optional)
+
+For the  **[../../comp/gb.compress]** and **[../../comp/gb.crypt]** components search for the following packages and install them:
+* zlib
+* zlib-devel
+* glibc
+* glibc-devel
+
+### SDL, 2D & 3D Graphics (optional)
+
+For the  **[../../comp/gb.sdl]**, **[../../comp/gb.opengl]** and **[../../comp/gb.qt.opengl]** components search for the following packages and install them:
+* SDL
+* SDL-devel
+* SDL_image
+* SDL_image-devel
+* Mesa
+* Mesa-devel
+
+For the  **[../../comp/gb.sdl.sound]** component search for the following packages and install them:
+* SDL_mixer
+* SDL_mixer-devel
+
+For the  **[../../comp/gb.v4l]** component search for the following packages and install them:
+* libpng
+* libpng-devel
+* libjpeg
+* libjpeg-devel
+
+### Extras
+If during the install process there are components where you have installed library but are not sure which is the development package then select the **Extras** option from the Yast **Software Management** menu and then the option **Install All Matching devel Packages** and install the packages it selects. This will properly install more devel packages than you need. It is best only to perform this step if you have problems later compiling gambas. But why not take the easy option.
+
+You should now have the basic requirements for Gambas or at least the most popular options. Now we need to compile Gambas.
+
+## Step 2: Compiling Gambas
+
+Download the required version of Gambas from [http://gambas.sourceforge.net/download.html] and then open a Linux terminal and unpack it:
+
+[[ box
+'shell> **tar xvfj gambas2-1.9.48.tar.bz2**
+<br/>*...*
+<br/>*list of unpacked files*
+<br/>*...*
+<br/>shell> **cd gambas-1.9.48**=
+]]
+
+Of course you need to substitute the version of Gambas you are installing in  these commands.
+
+Or you can get the latest **svn** version:
+
+[[ box
+'shell> **svn checkout https://svn.sourceforge.net/svnroot/gambas/2.0/trunk**
+<br/>*...*
+<br/>*list of downloaded files*
+<br/>*...*
+<br/>shell> **cd trunk**=
+]]
+
+Run through the usual install process to compile Gambas. This process is the same as in any other Linux distribution.
+
+[[ box
+'shell> **./reconf-all**
+<br/>*...*
+<br/>*view progress of reconfigure*
+<br/>*...*
+<br/>shell> **./configure -C**
+<br/>*...*
+<br/>*view progress of configure*
+<br/>*...*
+<br/>shell> **make**
+<br/>*...*
+<br/>*view progress of make*
+<br/>*...*
+<br/>shell> **su -c "make install"**
+<br/>Password: *enter root password*
+<br/>*...*
+<br/>*view progress of install*
+<br/>*...*=
+]]
+
+You should now have a working version of Gambas installed. You can check this by starting the Gambas IDE. If you have installed stable version 1 of Gambas enter the following in a Linux terminal:
+
+[[ box
+shell> **gambas**
+]]
+
+And for the development version of Gambas:
+
+[[ box
+shell> **gambas2**
+]]
+
+Of course you can add your desktop or menu links to make opening the Gambas IDE easier.

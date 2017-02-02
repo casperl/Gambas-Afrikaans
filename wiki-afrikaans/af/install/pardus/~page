@@ -1,0 +1,5 @@
+# Pardus
+
+First you need to install system.devel package to build Gambas2 or Gambas3 from sources:
+
+    sudo pisi install -c system.devel

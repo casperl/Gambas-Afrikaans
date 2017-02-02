@@ -1,0 +1,89 @@
+# Mandriva
+
+## 1. Install the development packages as root
+
+### For Mandriva 2007
+    $ su
+    Password: ***
+    # urpmi gettext-devel libbzip2_1-devel libcurl4-devel libgtk+2.0_0-devel
+    libkdecore4-devel libldap2.3_0-devel libmesagl1-devel libmesaglu1-devel
+    libmysql15-devel libomniorb4-devel libORBit2_0-devel libpcre0-devel libpoppler1-devel
+    libpq5-devel libqt3-devel librsvg2_2-devel libSDL1.2-devel libSDL_gfx0-devel
+    libSDL_image1.2-devel libSDL_mixer1.2-devel libSDL_ttf2.0-devel libsqlite0-devel
+    libsqlite3_0-devel libunixODBC1-devel libxml2-devel libxslt-devel postgresql-devel task-c-devel
+    task-c++-devel zlib1-devel libffi-devel
+    # exit
+### For Mandriva 2008
+    $ su
+    Password: ***
+    # urpmi gettext-devel libbzip2_1-devel libcurl-devel libgtk+2.0_0-devel
+    libkdecore4-devel libldap2.3_0-devel libmesagl1-devel libmesaglu1-devel
+    libmysql-devel libomniorb-devel libORBit2-devel libpcre-devel libpoppler-devel
+    libpq-devel libqt3-devel librsvg2-devel libSDL1.2-devel libSDL_gfx0-devel
+    libSDL_image1.2-devel libSDL_mixer1.2-devel libSDL_ttf-devel libsqlite0-devel
+    libsqlite3-devel libunixODBC1-devel libxml2-devel libxslt-devel postgresql-devel task-c-devel
+    task-c++-devel zlib1-devel libffi-devel
+    # exit
+### For Mandriva 2008 Spring
+    $ su
+    Password: ***
+    # urpmi gettext-devel libbzip2_1-devel libcurl-devel libgtk+2.0_0-devel
+    libkdecore4-devel libmesagl1-devel libmesaglu1-devel libmysql-devel libomniorb-devel libORBit2-devel
+    libpcre-devel libpoppler-devel libpq-devel libqt3-devel librsvg2-devel libSDL-devel libSDL_gfx-devel
+    libSDL_image-devel libSDL_mixer-devel libSDL_ttf-devel libsqlite0-devel libsqlite3-devel
+    libunixODBC1-devel libxml2-devel libxslt-devel postgresql-devel task-c-devel task-c++-devel zlib1-devel
+    libffi-devel
+    # exit
+### For Mandriva 2008 Spring 64 Bits & Mandriva 2009.0 64 Bits
+    $ su
+    Password: ***
+    # urpmi gettext-devel lib64bzip2_1-devel lib64curl-devel lib64kdecore4-devel lib64mesagl1-devel
+    lib64mesaglu1-devel lib64mysql-devel lib64omniorb-devel lib64ORBit2-devel lib64pcre-devel lib64poppler-devel
+    lib64pq-devel lib64qt3-devel lib64rsvg2-devel lib64SDL-devel lib64SDL_gfx-devel lib64SDL_image-devel
+    lib64SDL_mixer-devel lib64SDL_ttf-devel lib64sqlite0-devel lib64sqlite3-devel lib64unixODBC1-devel lib64xml2-devel
+    lib64xslt-devel postgresql-devel task-c-devel task-c++-devel zlib1-devel libffi-devel lib64gtk+-devel
+    lib64gtk+2.0_0-devel
+    # exit
+### For Mandriva 2009 Spring 32 Bits
+    $ su
+    Password: ***
+    # urpmi gettext-devel libbzip2_1-devel libcurl-devel libkdecore4-devel libmesagl1-devel libmesaglu1-devel libmysql-devel libomniorb-devel libORBit2-devel libpcre-devel libpoppler-devel libpq-devel libqt3-devel librsvg2-devel libSDL-devel libSDL_gfx-devel libSDL_image-devel libSDL_mixer-devel libSDL_ttf-devel libsqlite0-devel libsqlite3-devel libxml2-devel libxslt-devel postgresql-devel task-c-devel task-c++-devel zlib1-devel libffi-devel libgtk+-devel libgtk+2.0_0-devel libqt4-devel imlib2-devel
+### For Mandriva 2010 32 Bits
+    $ su
+    Password: ***
+    # urpmi gettext-devel libbzip2_1-devel libcurl-devel libkdecore5 libmesagl1-devel libmesaglu1-devel libmysql-devel libORBit2-devel libpcre-devel libpoppler-devel libpq-devel libqt3-devel librsvg2-devel libSDL-devel libsqlite0-devel libsqlite3-devel libxml2-devel libxslt-devel postgresql-devel task-c-devel task-c++-devel zlib1-devel libffi-devel libgtk+-devel libgtk+2.0_0-devel libqt4-devel libgdk-pixbuf2-devel libimlib2-devel libv4l-devel
+    
+    * NOTE: Pending some packages.
+    
+### For Mandriva 2010.2 64 Bits
+    $ su
+    Password: ***
+    # urpmi libSDL_mixer-devel SDL_sound-devel lib64glew-devel SDL_image-devel SDL_ttf-devel lib64SDL-devel lib64mysql-devel lib64unixODBC-devel lib64SDL-devel libmesagl-devel libmesaglu-devel libSDL-devel libsqlite-devel libgtk+2.0-devel gettext-devel libbzip2-devel libcurl-devel libORBit2-devel libpcre-devel libpoppler-devel libpq-devel librsvg2-devel libsqlite3-devel libxml2-devel libxslt-devel postgresql-devel task-c-devel task-c++-devel libffi-devel libqt4-devel libimlib2-devel libv4l-devel
+    
+
+[[ warning
+There is no packages for QT/Embedded, so this component will be disabled at configuration time.
+]]
+
+[[ info
+All needed packages should be provided by the 'urpmi' command above, but I may miss some of them.
+If the configuration disables a component other than QT/Embedded, please tell me, and I will find the
+missing package to update the list.
+]]
+## 2. Download a source package
+At [http://prdownloads.sourceforge.net/gambas/gambas2-2.0.0.tar.bz2?download] for example.
+
+    $ tar xfj gambas2-2.0.0.tar.bz2
+    $ cd gambas2-2.0.0
+### ...or the latest current version being developed
+You need the 'svn' client.
+
+    $ mkdir trunk
+    $ svn checkout https://gambas.svn.sourceforge.net/svnroot/[../../def/gambas]/gambas/trunk
+    $ cd trunk
+## 3. Compile and install it
+    $ ./reconf-all
+    $ ./configure -C
+    $ make
+    $ su -c "make install"
+    Password: ***

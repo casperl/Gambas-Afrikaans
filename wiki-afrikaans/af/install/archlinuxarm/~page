@@ -1,0 +1,44 @@
+# Arch Linux Arm
+
+@{index}
+
+## [Gambas 3]
+
+### [Compilation from source]
+
+#### [Getting the PKGBUILD script]
+First of all you need a machine running traditional Arch Linux. Bring up a terminal and type:
+
+    $ sudo pacman -S abs
+    $ sudo abs community/gambas3
+
+If everything went fine, you should now see something like:
+    ==> Starting ABS sync...
+    receiving file list ... done
+    community/
+    community/gambas3/
+    community/gambas3/PKGBUILD
+    community/gambas3/gambas3-runtime.install
+    community/gambas3/gambas3-script.install
+
+#### [Modifying the PKGBUILD script]
+
+Now browse to ´/var/abs/community/gambas3´ and open the PKGBUILD file in a text editor of your choosing. Find the line that says:
+
+    arch=('i686' 'x86_64')
+
+and change it to say:
+
+    arch=('armv6h')
+
+#### [Running the PKGBUILD script]
+
+Save the PKGBUILD file and copy the three files in the current folder over to a new folder in the home directory on your Raspbery Pi.
+Install the dependencies listed on the [../archlinux] wiki site.
+From a terminal, cd in to that new folder you just made and run ´$ makepkg´. This will download Gambas source files, compile them (can take the whole day) and create a bunch of Gambas 3 packages that you can now install on your Raspberry Pi with:
+
+    $ sudo pacman -U *.xz
+
+or just those you prefer with
+
+    $ sudo pacman -U package_name_of_your_choosing.tar.xz

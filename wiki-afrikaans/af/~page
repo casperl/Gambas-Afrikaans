@@ -1,0 +1,82 @@
+# Gambas Dokumentasie
+
+[[ no-border
+==
+[/readme]&nbsp;&nbsp;&nbsp;
+--
+[/license]&nbsp;&nbsp;&nbsp;
+--
+[Wiki syntax](/doc/wiki)&nbsp;&nbsp;&nbsp;
+--
+[/translate]&nbsp;&nbsp;&nbsp;
+--
+[/changes]&nbsp;&nbsp;&nbsp;
+]]
+
+## Language Reference
+
+<table class="no-border full"><tr><td width="50%">
+[/lang] \
+[/cat] \
+[Native Classes] (/comp/gb) \
+[/comp] \
+</td><td width="50%">
+[/error] \
+[/def] \
+[/doc/object-model]
+</td></tr></table>
+
+## Dokumente
+
+Here is a list of [documents] (/doc) that may help you.
+
+<table class="no-border full"><tr><td width="50%">
+[/doc/release] \
+[/install] \
+[/doc/faq] \
+[/ide] \
+[/doc/gb2togb3] \
+[Some Little Benchmarks] (/doc/benchmark)
+</td><td width="50%">
+[/doc/diffvb] \
+[/howto] \
+[/tutorial] *Not finished*. \
+[/app] \
+[/snippets]
+</td></tr></table>
+
+## Developers
+
+This is the [documentation] (/dev) for component developers.
+
+<table class="no-border full"><tr><td width="50%">
+[/dev/gambas] \
+[/dev/overview] \
+[/dev/api]
+</td><td width="50%">
+[/dev/gambas_components] \
+[/howto/svn]
+</td></tr></table>
+
+## Translators
+
+<table class="no-border full"><tr><td width="50%">
+[/howto/translate]
+</td><td width="50%">
+[/howto/svn]
+</td></tr></table>
+
+## Packagers
+
+[/howto/package]
+
+<div align="center" style="font-style:italic;font-size:80%;margin-top:4em;">
+<!--<img src="/wiki/logo3.png?v" width="96px;" style="border:solid 4px #DF6B00;border-radius:160px;padding:2px;box-shadow:0 0 8px gray;background:white;margin-bottom:2em;">-->
+
+This documentation is based on a Wiki written in Gambas. \
+If you want to modify some pages, you must register on the bugtracker. \
+Once done, you must learn the [wiki syntax](/doc/wiki).
+
+The documentation is under the [Creative Commons Attribution-ShareAlike (CC-BY-SA) 3.0] (http://creativecommons.org/licenses/by-sa/3.0/) license.
+
+</div>

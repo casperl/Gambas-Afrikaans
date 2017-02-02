@@ -1,0 +1,35 @@
+# Arch Linux
+
+@{index}
+
+## [Gambas 3]
+
+### [Binary packages]
+
+They are in the official repositories. To install them:
+
+    $ sudo pacman -S gambas3
+
+### [Compilation from sources]
+
+To install the development packages needed to compile all Gambas components, do that:
+
+    $ sudo pacman -S --needed automake autoconf gcc intltool mysql postgresql libffi bzip2 glib2 v4l-utils zlib mesa libgl glew xdg-utils gtk2 imlib2 gdk-pixbuf2 postgresql-libs libmysqlclient unixodbc sqlite2 sqlite librsvg curl poppler-glib sdl_mixer sdl_ttf libxtst pcre qtwebkit libxcursor libsm dbus-core libxml2 libxslt libgnome-keyring gsl gstreamer gst-plugins-base gtkglext ncurses smpeg2 sdl2 sdl2_gfx sdl2_image sdl2_mixer sdl2_net sdl2_ttf gmime llvm35 llvm35-libs alure
+
+[[ info
+
+This list allow to install all the gambas components but this is not mandatory to launch the ide.
+
+]]
+
+[[ warning
+If you use a proprietary video driver (e.g. the NVIDIA binary blob or Catalyst) remove 'libgl' from the dependencies above, as it will cause conflicts.
+]]
+
+If you want to compile the latest '/trunk' development version, you need subversion:
+
+    $ pacman -S subversion
+
+## [Gambas 2]
+
+See the [old instructions] (./old).

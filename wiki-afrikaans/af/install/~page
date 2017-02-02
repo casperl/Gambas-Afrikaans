@@ -1,0 +1,308 @@
+# Compilation & Installation
+
+@{index}
+
+## [Requirements]
+
+### [Development Packages]
+
+In order to compile Gambas, you must install the following development packages.
+
+The actual name of these development packages depends on your distribution, so please refer to the distribution specific pages above for more details.
+
+[[
+Component
+--
+Requirements (libraries or 'pkg-config' module)
+==
+Compilation
+--
+'gcc g++ automake autoconf libtool >= 2.0'
+==
+Interpreter
+--
+'libffi'
+==
+'gb.compress.bzlib2'
+--
+'libbz2.so'
+==
+'gb.compress.zlib'
+--
+'libz.so'
+==
+'gb.cairo'
+--
+'cairo >= 1.6.0 cairo-ft >= 1.6.0'
+==
+'gb.crypt'
+--
+'libcrypt.so'
+==
+'gb.db.mysql'
+--
+'libmysqlclient.so', 'libz.so'
+==
+'gb.db.odbc'
+--
+'libodbc.so'
+==
+'gb.db.postgresql'
+--
+'libpq.so'
+==
+'gb.db.sqlite2'
+--
+'libsqlite.so'
+==
+'gb.db.sqlite3'
+--
+'libsqlite3.so'
+==
+'gb.dbus'
+--
+'dbus-1'
+==
+'gb.desktop'
+--
+'libXtst.so'
+==
+'gb.desktop.gnome'
+--
+'gnome-keyring-1'
+==
+'gb.gmp'
+--
+'libgmp.so'
+==
+'gb.gsl'
+--
+'libgsl.so libgslcblas.so'
+==
+'gb.gtk'
+--
+'gtk+-2.0 >= 2.16 cairo >= 1.6.0 cairo-ft >= 1.6.0 '
+'gtk+-unix-print-2.0 >= 2.10 '
+'librsvg-2.0 >= 2.14.3 '
+==
+'gb.gtk.opengl'
+--
+'gtkglext-1.0'
+==
+'gb.image.io'
+--
+'gdk-pixbuf'
+==
+'gb.image.imlib'
+--
+'imlib'
+==
+'gb.jit'
+--
+'LLVM >= 3.1'
+==
+'gb.libxml'
+--
+'libxml-2.0'
+==
+'gb.media'
+--
+'gstreamer-0.10 >= 0.10.31 gstreamer-interfaces-0.10 >= 0.10.31' for Gambas \<= 3.4
+
+'gstreamer-1.0 gstreamer-video-1.0' for Gambas >= 3.5
+==
+'gb.mime'
+--
+'gmime-2.4' or 'gmime-2.6'
+==
+'gb.ncurses'
+--
+'ncurses.so panel.so'
+==
+'gb.net.curl'
+--
+'libcurl >= 7.13'
+==
+'gb.net.smtp'
+--
+'glib-2.0'
+==
+'gb.opengl gb.opengl.glsl'
+--
+'libGL.so libGLEW.so'
+==
+'gb.opengl.glu'
+--
+'libGLU.so'
+==
+'gb.openssl'
+--
+'openssl'
+==
+'gb.pcre'
+--
+'libpcre.so'
+==
+'gb.pdf'
+--
+'poppler >= 0.5'
+==
+'gb.qt4 gb.qt4.ext gb.qt4.opengl gb.qt4.webkit'
+--
+All Qt4 libraries >= Qt 4.5
+==
+'gb.qt5'
+--
+'Qt5Core >= 5.3.0 Qt5Gui Qt5Widgets Qt5Svg Qt5PrintSupport Qt5X11Extras'
+==
+'gb.qt5.opengl'
+--
+'Qt5Core >= 5.3.0 Qt5Gui Qt5Widgets Qt5OpenGL'
+
+Note: Qt5OpenGL is not needed if your Qt version is >= 5.4.0
+==
+'gb.qt5.webkit'
+--
+'Qt5Core >= 5.3.0 Qt5Gui Qt5Widgets Qt5Network Qt5Xml Qt5WebKit Qt5WebKitWidgets Qt5PrintSupport'
+==
+'gb.sdl'
+--
+'libSDL.so libSDL_ttf.so libGL.so libGLEW.so'
+==
+'gb.sdl2'
+--
+'libSDL2-2.0.so libSDL2_ttf-2.0 libGL.so libGLEW.so'
+==
+'gb.sdl.sound'
+--
+'libSDL.so libSDL_mixer.so'
+==
+'gb.sdl2.sound'
+--
+'libSDL2-2.0.so libSDL2_mixer-2.0.so'
+==
+'gb.v4l'
+--
+'libjpeg.so libpng.so' Video4Linux >= 2.0
+==
+'gb.xml.xslt'
+--
+'libxml-2.0 libxslt'
+]]
+
+### [Other requirements]
+
+You must have the right to write to '/tmp', otherwise Gambas will not work.
+
+The following versions of GNU tools are needed:
+* 'automake' 1.11.1
+* 'autoconf' 2.68
+* 'libtool' 2.4
+
+Compiling with older version may or may not work!
+
+
+## [How to compile and install Gambas 3]
+
+### [Source package configuration]
+
+When you are sure that everything is downloaded, type the following
+magic sentences in a shell.
+
+[[ info
+'\'$\'' represents your shell prompt, and '\'...\'' are the
+messages printed during the configuration and compilation.
+]]
+
+First, enter the source top-level directory.
+
+    $ cd /path/to/source/directory/
+
+Then, type that to create the configuration scripts.
+
+    $ ./reconf-all
+
+Then type that to analyze the current system and configure the package:
+
+    $ ./configure -C
+    ...
+
+If a library or a development package is missing, then you will be
+warned that some components are disabled.
+
+[[ info
+There are more \'configure\' specific explanations in the 'INSTALL' file located in the top-level source directory.
+I invite you to read them.
+]]
+
+### [Compilation]
+
+If everything is configured without error, then run this command to compile the program:
+
+    $ make
+    ...
+
+### [Installation]
+
+If everything compiles without error, then enter this command to install everything:
+
+[[ info
+You must be 'root' to install Gambas on your system.
+]]
+
+    $ su -c "make install"
+    Password: <Type the root password here>
+    ...
+
+or
+
+    $ sudo make install
+    Password: <Type your password here>
+    ...
+
+
+### [Troubleshooting]
+
+If you did several successive compilations, after having updated the source from the subversion
+repository for example, and if something fails during
+all this process, you can try to "reconfigure" the configuration scripts by typing the following command:
+
+    $ ./reconf-all
+
+Then you can run './configure -C' again
+
+If it does not work, I need to know what happened exactly.
+To do so, type the following command :
+
+    $ ( ./configure -C; make; make install ) > output.txt 2>&1
+
+And send me the file "output.txt" by mail, with every other
+detail about your computer and your distribution you find
+useful.
+
+## [Instructions for specific distributions]
+
+<!--
+### [[./archlinux]]
+### [[./archlinuxarm]]
+### [[./debian]]
+### [[./fedora]]
+### [[./linux_mint]]
+### [[./mageia]]
+### [[./pardus]]
+### [[./raspbian]]
+### [[./ubuntu]]
+-->
+
+@{index /install}
+
+## [The Development Environment]
+
+The Gambas IDE is made with Gambas. In order to compile and use it, you need to compile the following components:
+
+@{project-dependencies gambas3-ide}
+
+## [Compiling from Subversion]
+
+To compile the latest development version of Gambas from the subversion repository,
+read the [/howto/svn] page.

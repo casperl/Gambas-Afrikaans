@@ -1,0 +1,97 @@
+# Fedora
+
+@{index}
+
+----
+
+## [Gambas 3.0 binaries]
+
+----
+
+### [Fedora 17 -> 19]
+
+Current binaries available in the Fedora repository are for Gambas 3.4.1 (Fedora updates has Gambas 3.5.4)
+
+    $ yum install gambas3 
+
+### [Fedora 20]
+
+Current binaries available in the Fedora repository are for Gambas 3.5.1 (Fedora updates has Gambas 3.6.1)
+
+    $ yum install gambas3 
+
+### [Fedora 21]
+
+Current binaries available in the Fedora repository are for Gambas 3.5.4 (Fedora updates has Gambas 3.8.0)
+
+    $ yum install gambas3
+
+### [Fedora 22]
+
+Current binaries available in the Fedora repository are for Gambas 3.7.1 (Fedora updates has Gambas 3.8.0)
+
+    $ yum install gambas3  
+
+### [Fedora 23]
+
+Current binaries available in the Fedora repository are for Gambas 3.8.0
+
+    $ yum install gambas3  
+
+### [Fedora rawhide]
+
+Current binaries available in the Fedora repository are for Gambas 3.8.0
+
+    $ yum install gambas3 
+
+
+Check <a href="http://pkgs.org/search/?query=gambas3&type=smart"target="_blank">pfgs.org</a> for the most recent availability of Gambas 3 binary packages on Fedora.
+
+----
+
+## [Gambas 3.0 compilation instructions]
+
+----
+
+[[ info
+Installing binaries with a package management system is ALWAYS preferred over compilation and installation.
+]]
+
+
+### [Retrieving the development packages:]
+
+    # yum groupinstall "Development Tools" "Development Libraries"
+
+### [Retrieving the remaining packages:]
+
+For Fedora 12:
+
+    # yum install cairo-devel libsqlite3x-devel sqlite2-devel gtk2-devel gtkglext-devel imlib2-devel librsvg2-devel poppler-devel qt-devel libv4l-devel SDL-devel SDL_sound-devel SDL_ttf-devel SDL_net-devel SDL_mixer-devel SDL_image-devel SDL_gfx-devel SDL_Pango-devel unixODBC-devel postgresql-devel libXtst-devel mysql-devel pcre-devel mesa-libGLU-devel mesa-libGLw-devel mesa-libGL-devel glew-devel
+
+For Fedora 13, 14, 15 & 16:
+
+    # yum install cairo-devel libsqlite3x-devel sqlite2-devel gtk2-devel gtkglext-devel imlib2-devel librsvg2-devel poppler-devel qt-devel libv4l-devel SDL-devel SDL_sound-devel SDL_ttf-devel SDL_net-devel SDL_mixer-devel SDL_image-devel SDL_gfx-devel SDL_Pango-devel unixODBC-devel postgresql-devel libXtst-devel mysql-devel pcre-devel mesa-libGLU-devel mesa-libGLw-devel mesa-libGL-devel glew-devel dbus-devel libzip libzip-devel bzip2-devel libcurl-devel qt-webkit-devel libxml2-devel
+
+For Fedora 17:
+
+    yum install cairo-devel libsqlite3x-devel sqlite2-devel gtk2-devel gtkglext-devel imlib2-devel librsvg2-devel poppler-devel qt-devel libv4l-devel SDL-devel SDL_sound-devel SDL_ttf-devel SDL_net-devel SDL_mixer-devel SDL_image-devel SDL_gfx-devel SDL_Pango-devel unixODBC-devel postgresql-devel libXtst-devel mysql-devel pcre-devel mesa-libGLU-devel mesa-libGLw-devel mesa-libGL-devel glew-devel dbus-devel libzip libzip-devel bzip2-devel libcurl-devel qt-webkit-devel libxml2-devel libxslt-devel libv4l-devel libjpeg-turbo-devel ncurses-devel gsl-devel libXtst-devel gstreamer-devel gstreamer-plugins-base-devel
+
+### [Make the directory for the gambas3 sources and move into it:]
+
+    $ mkdir gambas3-sources
+    $ cd gambas3-sources
+
+### [Retrieve the sources from gambas.sourceforge.net]
+
+    $ svn checkout https://gambas.svn.sourceforge.net/svnroot/gambas/gambas/trunk/
+    $ cd trunk
+
+### [Launch the following commands to start the compilation:]
+
+    $ ./reconf-all
+    $ ./configure
+    $ make
+
+### [Install gambas3 into the system]
+
+    # make install

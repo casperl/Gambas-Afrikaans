@@ -1,0 +1,31 @@
+# FreeBSD
+
+In order to compile Gambas on FreeBSD, you must install required development packages.
+
+[[ info
+For this How-to I\'m using pre-compiled packages, but you can use FreeBSD ports instead, of course. :-)
+]]
+
+
+Here is the packages list :
+
+    # pkg_add -r autoconf268 automake111 libtool libffi bzip2 unixODBC mysql55-client postgresql91-client sqlite2 sqlite3 libXtst gtk20 librsvg2 cairo gdk-pixbuf imlib imlib2 curl pcre poppler qt4 qt4-moc sdl sdl_ttf sdl_mixer sdl_image libGL libGLU glew libv4l v4l_compat libxml2 libxslt
+
+Once you\'ve installed these packages, you can create a repertory to get a copy of the branch development. For example in your **home/** :
+
+    $ mkdir trunk
+    $ svn checkout https://gambas.svn.sourceforge.net/svnroot/gambas/gambas/trunk/
+
+Then, you can compile the Gambas source code:
+
+    $ ./reconf-all
+    $ ./configure
+    $ make
+    # make install
+
+Note you could obtain some problems at compile time because of some environment variables.\
+Indeed, if you get an error about any linker options, don\'t forget to verify if you have well the *LD_LIBRARY_PATH* environment variable declared on your FreeBSD system.\
+The value of this variable must contains : **/usr/local/lib**
+
+Second thing, on \*BSD systems the OpenGL headers are located at **/usr/X11R6/include** .\
+So once again, don\'t forget to add this path in the *CPATH* environment variable on your FreeBSD system. Otherwise you cannot compile the [../../comp/gb.qt4.opengl] component and all others related to this one.

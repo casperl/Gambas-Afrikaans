@@ -1,0 +1,32 @@
+# Mageia
+
+#### Retrieving the development packages on Mageia 1:
+
+    # urpmi libtool autoconf automake gettext-devel qt4-devel glew-devel libSDL-devel xcursor-devel libSDL_ttf-devel mysql-devel cairo-devel libpoppler-devel libSDL_sound-devel libSDL_mixer-devel curl-devel libsqlite0-devel libsqlite3-devel gtk+2.0-devel rsvg2-devel gtkglext-devel ffi-devel bzip2-devel imlib2-devel postgresql-devel unixODBC-devel v4l-devel task-c++-devel gsl-devel qtwebkit-devel libxml2-devel libxslt-devel libxtst-devel jpeg-devel png-devel
+
+#### Retrieving the development packages on Mageia 2, 3 and 4:
+    # urpmi libgmime-devel automake bzip2-devel autoconf unixODBC-devel gettext-devel png-devel jpeg-devel sqlite3-devel qt4-devel qtwebkit-devel glew-devel SDL-devel libxcursor-devel SDL_ttf-devel mysql-devel cairo-devel poppler-devel SDL_sound-devel SDL_mixer-devel curl-devel libgtk+2.0-devel librsvg2-devel gtkglext-devel libffi-devel imlib2-devel postgresql-devel libv4l-devel libxml2-devel libxslt-devel libxtst-devel xdg-utils desktop-file-utils sqlite-devel gsl-devel libgnome-keyring-devel llvm-devel
+
+#### Make the directory for the gambas3 sources and move into it:
+
+    $ mkdir gambas3-sources
+    $ cd gambas3-sources
+
+#### Retrieve the sources from gambas.sourceforge.net
+
+    $ svn checkout svn://svn.code.sf.net/p/gambas/code/gambas/trunk
+    $ cd trunk
+
+#### Launch the following commands to start the compilation:
+
+    $ ./reconf-all
+    $ ./configure
+    $ make
+
+If you are compiling gambas3 on a 64bit capable architecture (x86_64) you may want to install object code libraries into /usr/lib64 rather than /usr/lib launching
+
+    $ ./configure --prefix=/usr --libdir=/usr/lib64
+
+#### Install gambas3 into the system
+
+    # make install

@@ -1,0 +1,97 @@
+# IDE Snippets
+
+@{index}
+
+The Gambas IDE provides a modifiable set of coding shortcuts that an ease
+typing effort in the IDE considerably. Entering a code shortcut at the beginning of a line and
+pressing the 'TAB' key will automatically expand the shortcut into a defined piece of code.
+
+The standard shortcuts provided with the IDE can be seen on the **Code formatting** tab
+of the **Preferences** form. At the bottom of the tab is a scrollable list of *trigger strings*
+and the associated *expansion macros*.
+
+### [Using IDE Snippets]
+#### [Activating / Deactivating]
+
+In order to use IDE Snippets when coding, the Activate Code Snippets checkbox must be selected in the
+Preferences. If not then pressing a 'TAB' after entering a trigger string will simply insert a TAB character
+on the current code line.
+
+IDE Snippets expand and include the inbuilt code completion features of Gambas.
+
+#### [A Few Commonly Used Examples]
+
+**p 'TAB'** will insert a property declaration. The cursor will be positioned at the point where the
+property name can be inserted. The selected text can simply be over-typed. Pressing 'TAB' again will position
+the cursor at the point for entry of the property data type. Finally pressing 'Enter' will commit the snippet
+expansion and return usage of the IDE editor back to its\' "normal" state.
+
+**f 'TAB'** will insert a function declaration block. Again the cursor will be positioned for entry of the function name.
+However in this case, pressing the 'TAB' more times will move through the entry points for the function name, the signature,
+the return type and finally to the point of entry of your first line of code for the function. Note that in this case,
+the IDE editor has appeared to return to "normal operations". In fact, the snippet parser is still in operation and remains
+so until you move the cursor outside the function block. So, for example, if you overlooked entering the return type,
+positioning the cursor back anywhere on the declaration line and pressing 'Tab' will highlight that overlooked expansion
+macro token.
+
+A few other triggers you may like to investigate are:
+* main 'TAB' : generates a Main sub.
+* fe 'TAB' : generates a For Each ... Next block
+* d 'TAB' and di 'tab' and other derivatives : generates Dim lines
+* (my favorite!) gpl 'Tab' : generates the GPL short statement
+
+Finally, if the initial expansion isn\'t what you wanted at all, just press 'Ctrl' + 'z' to get back your original typing.
+
+### [Expansion Macros]
+You can define your own IDE Snippets!
+
+Again, on the **Preferences** form, **Code formatting** tab next to the list of snippets are the buttons to create, change or delete
+custom snippets (it will also let you see the standard ones in read-only mode - handy if you want to copy the existing macro).  To create a new snippet click the 'New...' button. You are presented with a form containing two
+controls, a textbox for entering the trigger string and an editor for entering the expansion macro.
+
+If you attempt to use a trigger string that is already defined, the IDE will pop up a balloon "This trigger string is already in use."
+when you try to save the snippet.
+
+#### [Syntax]
+The syntax for IDE Snippets is very simple but can take some getting used to.
+There are two parts, as indicated above, the *trigger string* and the *expansion macro*.
+
+##### [Trigger Strings]
+The trigger string can be any character string without inner spaces. *However*, it is ~probably safer~ to use lower case
+alpha or alpha+numeric strings. Not too difficult eh!
+
+##### [Expansion Macros]
+Expansion macros have three aspects.
+
+###### [~Literal code~]
+which is any sequence of characters and escaped characters not included below. So text like
+
+[[ box
+  If [../../lang/isinteger]\(sText) Then\
+    Return False
+]]
+will be inserted ~as is~ including the leading spaces, newlines and tabs (that you will see as escape sequences in the Preferences list).
+In fact, inserting escape sequences in the macro should be avoided unless they are part of a literal string, as they will be double escaped in the internal macro code.
+
+(Yes, even the typo will be entered verbatim.)
+
+
+###### [~Insertion points~]
+indicate where the cursor will be positioned after expansion. They are indicated by a sub-string '${n:lit_token}' in the code where **'n'** is the ordinal cursor position of the token and **'lit_token'** is the text that will be displayed and highlighted for that token. So
+
+[[ box
+ ? \${1:Variable\}
+]]
+
+will result in
+
+<font style="font-family: &quot;Courier New&quot;,Courier,monospace;">  ? <font style="background-color: rgb(204, 204, 204);" color="black">Variable</font></font>\
+
+(which will automatically expand to "Print ..." when you leave that line.)
+
+
+###### [~Project Metadata~]
+The macro expansion also allows you to insert *a few* bits of project metadata in your macro. The metadata currently available is:
+* The project title. (use a ${n:$TITLE} token)
+* The project description. (use a ${n:$DESCRIPTION) token), and
+* The project author. (use a ${n:$AUTHOR} token)

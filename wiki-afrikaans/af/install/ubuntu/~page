@@ -1,0 +1,242 @@
+# Ubuntu
+
+@{index}
+
+[[ info
+The following instructions to install Gambas on Ubuntu are also applicable for Lubuntu, Kubuntu, Xubuntu, Linux Mint and other Ubuntu based distributions.
+]]
+
+## [<font color="darkblue">Gambas 3 binaries</font>]
+
+### [<font color="green">Gambas 3 stable</font>]
+
+Latest Gambas 3 binary packages can be found in a PPA made by the Gambas Team.
+
+It allows you to install latest Gambas 3 stable version without compiling it!
+
+First add the PPA to your sources.list. Open a terminal and do:
+
+    $ sudo add-apt-repository ppa:gambas-team/gambas3
+
+Next update the sources and install Gambas:
+
+    $ sudo apt-get update
+    $ sudo apt-get install gambas3
+
+After installation you will find Gambas 3 installed in menu \'Programming\'.
+
+[[ info
+Note that the stable repository holds binaries for armhf. These can be used on the Lubuntu 14.04 image for Banana Pi.
+]]
+
+[[ warning
+**DO NOT USE** the Gambas packages in the Ubuntu repository made for 12.04 (precise) up to 14.04 (trusty). They are wrong and an older version 3.1.1.<br/>
+<b>Note</b> that as of Ubuntu 14.10 (utopic) the Gambas packages in the Ubuntu repository are for Gambas 3.5.4.
+]]
+
+
+### [<font color="green">Gambas 3 version on `/trunk`</font>]
+
+There are binary packages for the latest version on `/trunk` made daily by the Gambas Team.
+
+It allows you to test the latest development version without having to compile it!
+
+First add the PPA to your sources.list. Open a terminal and do:
+
+    $ sudo add-apt-repository ppa:gambas-team/gambas-daily
+
+Next update the sources and install Gambas:
+
+    $ sudo apt-get update
+    $ sudo apt-get install gambas3
+
+After installation you will find Gambas 3 installed in menu \'Programming\'.
+
+[[ info
+Note that the dialy build repository holds binaries for armhf. These can be used on the Lubuntu 14.04 image for Banana Pi.
+]]
+
+[[ warning
+**DO NOT ** add the stable and trunk PPA at the same time! It is either stable or trunk.
+]]
+
+## [<font color="darkblue">Gambas 3 Compilation</font>]
+
+[[ info
+Installing binaries with a package management system is ALWAYS preferred over compilation and installation.
+]]
+
+### [<font color="green">Gambas 3 (version <= 3.4.2)</font>]
+
+<i>Step 1.</i> Get the source code (either download and extract the package from main Gambas website or use svn checkout)
+
+<i><b>Note:</b> For using svn checkout see [A note on installing from svn](#t9) and [Downloading Gambas from Subversion repository](#t10)</i>
+
+<i>Step 2.</i> When installing first update the sources:
+
+    $ sudo apt-get update
+
+<i>Step 3.</i> Install these packages :
+
+Open a terminal and do:
+
+    $ sudo apt-get install build-essential g++ automake autoconf libbz2-dev libmysqlclient-dev unixodbc-dev libpq-dev postgresql-server-dev-9.3 libsqlite0-dev libsqlite3-dev libglib2.0-dev libgtk2.0-dev libcurl4-gnutls-dev libgtkglext1-dev libpcre3-dev libsdl-sound1.2-dev libsdl-mixer1.2-dev libsdl-image1.2-dev libxml2-dev libxslt1-dev librsvg2-dev libpoppler-dev libpoppler-glib-dev libpoppler-private-dev libxtst-dev libffi-dev libqt4-dev libglew1.5-dev libimlib2-dev libv4l-dev libsdl-ttf2.0-dev libgnome-keyring-dev libgdk-pixbuf2.0-dev linux-libc-dev libgsl0-dev libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev libcairo2-dev libgsl0-dev libncurses5-dev libgmime-2.6-dev llvm-dev
+
+[[ warning
+**Note:** For older versions of Ubuntu dependencies might have a to low version resulting in some components not being compiled.
+
+For availability of packages in your specific distribution version see [A note on package dependencies](#t11)
+]]
+
+<i>Step 4.</i> Go into the directory where the Gambas source file are located and run the script :
+
+    $ ./reconf-all
+
+<i>Step 5.</i> Once this script is finished, you can run the common commands to compile and install a program under GNU/Linux :
+
+    $ ./configure -C
+    $ make
+    $ sudo make install
+
+<i>Step 6.</i> Type gambas3
+
+Gambas should start and run.
+
+<i><b>Note:</b> You can make a symlink to start gambas3</i>
+
+
+### [<font color="green">Gambas 3 (version >= 3.5 and <= 3.6)</font>]
+
+<i>Step 1.</i> Get the source code (either download and extract the package from main Gambas website or use svn checkout)
+
+<i><b>Note:</b> For using svn checkout see [A note on installing from svn](#t9) and [Downloading Gambas from Subversion repository](#t10)</i>
+
+<i>Step 2.</i> When installing first update the sources:
+
+    $ sudo apt-get update
+
+<i>Step 3.</i> Install these packages :
+
+Open a terminal and do:
+
+    $ sudo apt-get install build-essential g++ automake autoconf libbz2-dev libmysqlclient-dev unixodbc-dev libpq-dev postgresql-server-dev-9.3 libsqlite0-dev libsqlite3-dev libglib2.0-dev libgtk2.0-dev libcurl4-gnutls-dev libgtkglext1-dev libpcre3-dev libsdl-sound1.2-dev libsdl-mixer1.2-dev libsdl-image1.2-dev libsage-dev libxml2-dev libxslt1-dev librsvg2-dev libpoppler-dev libpoppler-glib-dev libpoppler-private-dev libasound2-dev libesd0-dev libdirectfb-dev libxtst-dev libffi-dev libqt4-dev libglew1.5-dev libimlib2-dev libv4l-dev libsdl-ttf2.0-dev libgnome-keyring-dev libgdk-pixbuf2.0-dev linux-libc-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libcairo2-dev libgsl0-dev libncurses5-dev libgmime-2.6-dev llvm-dev libalure-dev libgmp-dev libgtk-3-dev
+
+[[ warning
+For more recent versions of Ubuntu you might need higher versions of dependencies than mentioned above.
+
+For older versions of Ubuntu dependencies might have a to low version resulting in some components not being compiled.
+
+For availability of packages in your specific distribution version see [A note on package dependencies](#t11)
+]]
+
+<i>Step 4.</i> Go into the directory where the Gambas source file are located and run the script :
+
+    $ ./reconf-all
+
+<i>Step 5.</i> Once this script is finished, you can run the common commands to compile and install a program under GNU/Linux :
+
+    $ ./configure -C
+    $ make
+    $ sudo make install
+
+<i>Step 6.</i> Type gambas3
+
+Gambas should start and run.
+
+<i><b>Note:</b> You can make a symlink to start gambas3</i>
+
+
+### [<font color="green">Gambas 3 (version >= 3.7 and development version on `/trunk`)</font>]
+
+<i>Step 1.</i> Get the source code from the Gambas Subversion repository /trunk folder using svn checkout.
+
+<i><b>Note:</b> For using svn checkout see [A note on installing from svn](#t9) and [Downloading Gambas from Subversion repository](#t10)</i>
+
+<i>Step 2.</i> When installing first update the sources:
+
+    $ sudo apt-get update
+
+<i>Step 3.</i> Install these packages :
+
+Open a terminal and do:
+
+    $ sudo apt-get install build-essential g++ automake autoconf libtool libbz2-dev libmysqlclient-dev unixodbc-dev libpq-dev postgresql-server-dev-9.3 libsqlite0-dev libsqlite3-dev libglib2.0-dev libgtk2.0-dev libcurl4-gnutls-dev libgtkglext1-dev libpcre3-dev libsdl-sound1.2-dev libsdl-mixer1.2-dev libsdl-image1.2-dev libsage-dev libxml2-dev libxslt1-dev librsvg2-dev libpoppler-dev libpoppler-glib-dev libpoppler-private-dev libasound2-dev libesd0-dev libdirectfb-dev libxtst-dev libffi-dev libqt4-dev libqtwebkit-dev libqt4-opengl-dev libglew1.5-dev libimlib2-dev libv4l-dev libsdl-ttf2.0-dev libgnome-keyring-dev libgdk-pixbuf2.0-dev linux-libc-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libcairo2-dev libgsl0-dev libncurses5-dev libgmime-2.6-dev llvm-dev llvm libalure-dev libgmp-dev libgtk-3-dev libsdl2-dev libsdl2-mixer-dev libsdl2-ttf-dev libsdl2-image-dev sane-utils libdumb1-dev
+
+For version on `/trunk` and 3.8 or higher add:
+
+    $ sudo apt-get install libqt5opengl5-dev libqt5svg5-dev libqt5webkit5-dev libqt5x11extras5-dev qtbase5-dev
+
+[[ warning
+**Note:** For trunk version you might need to install more dependencies as new components get developed.
+For more recent versions of Ubuntu you might need higher versions of dependencies than mentioned above.
+
+For older versions of Ubuntu dependencies might have a to low version resulting in some components not being compiled.
+E.g Version on `/trunk` and 3.8 or higher needs qt5 packages for version 5.3 or higher, Ubuntu 12.04 and 14.04 have qt5 packages for version 5.2.
+
+For availability of packages in your specific distribution version see [A note on package dependencies](#t11)
+]]
+
+<i>Step 4.</i> Go into the directory where the Gambas source file are located and run the script :
+
+    $ ./reconf-all
+
+<i>Step 5.</i> Once this script is finished, you can run the common commands to compile and install a program under GNU/Linux :
+
+    $ ./configure -C
+    $ make
+    $ sudo make install
+
+<i>Step 6.</i> Type gambas3
+
+Gambas should start and run.
+
+<i><b>Note:</b> You can make a symlink to start gambas3</i>
+
+## [<font color="darkblue">Important notes</font>]
+
+### [<font color="blue">A note on installing from svn</font>]
+
+If you want to compile the latest '/trunk' development version or a stable version from svn, you need to install subversion first.
+
+To do this open a terminal and do:
+
+    $ sudo apt-get install subversion
+
+You will now be able to do a svn checkout.
+
+### [<font color="blue">Downloading Gambas from Subversion repository</font>]
+
+Everybody can make a copy of the repository on his hard disk by using the following command:
+
+<b>For trunk version</b>
+
+    $ svn checkout svn://svn.code.sf.net/p/gambas/code/gambas/trunk
+
+<b>For current stable version (3.8)</b>
+
+    $ svn checkout svn://svn.code.sf.net/p/gambas/code/gambas/branches/3.8
+
+<b>For an old stable version (e.g. 3.6)</b>
+
+    $ svn checkout svn://svn.code.sf.net/p/gambas/code/gambas/branches/3.6
+
+### [<font color="blue">A note on package dependencies</font>]
+
+As dependencies may change over time it is always a good thing to know what is available on Ubuntu and in what repository.
+
+Check <a href="http://packages.ubuntu.com/"target="_blank">Ubuntu Package Search</a> for the availability of needed dependency packages on Ubuntu.
+
+If you scroll down on the page you can search for a package and find out what repositories hold them.
+
+<img src="http://develop.earthshipeurope.org/Gambas3/AppImage/UbuntuPack.png"><br/>
+<i>Search for package llvm-3.3-dev shows us it is available in precise-updates, saucy and trusty.</i>
+
+## [<font color="darkblue">Gambas 2</font>]
+
+See the [old deprecated instructions] (./old).
+
+----
+'Ubuntu Gambas 3 instructons by: W. Raets - Sept 8th, 2013<br/>
+' - Last updated: September 16th, 2015 by W. Raets (gbWilly)<br/>
+
+

@@ -1,0 +1,25 @@
+# Application Repository
+
+Here is a list of medium or big applications written in Gambas.
+
+@{index /app}
+
+[[ warning
+And do not forget that the Gambas IDE is written in Gambas! :-)
+]]
+
+## How to add an application
+
+[[ info
+Feel free to add your applications, provided that it is more than ten lines of code, and that you respect the same page layout as other ones.
+]]
+
+Let\'s suppose that your application is named 'MyGreatSoftware'. We will put it under the '/app/mygreatsoftware' wiki path. The rule is putting all characters of the name in lower case, and using the minus character if needed.
+
+So you have to enter the following URL into your browser:
+
+    http://gambaswiki.org/wiki/app/mygreatsoftware
+
+The wiki tells you that the page is not available. Then you click on the *Create* link.
+
+To fill the page contents, just open an already existing  application page in editing mode, and use it as a template. Once done, just click on the *Save* button. That\'s all!

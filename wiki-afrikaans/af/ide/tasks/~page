@@ -1,0 +1,9 @@
+# Inline Tasks
+
+@{since 3.3}
+
+Each comment anywhere in the source code beginning with
+'TODO:', 'FIXME:', or 'NOTE:' is automatically listed in a
+new tab named \'Tasks\' in the bottom debugging panel.
+
+[./screenshot.png]

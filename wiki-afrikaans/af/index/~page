@@ -1,0 +1,39 @@
+# Index of all Documents
+
+@{index}
+
+### [The Main Help Directory]
+
+@{index /}
+
+### [[/lang]]
+
+@{index /lang}
+
+### [[/comp]]
+
+@{index /comp}
+
+### [[/howto]]
+
+@{index /howto}
+
+### [[/cat]]
+
+@{index /cat}
+
+### [[/def]]
+
+@{index /def}
+
+### [[/doc]]
+
+@{index /doc}
+
+### [[/error]]
+
+@{index /error}
+
+### [[/install]]
+
+@{index /install}

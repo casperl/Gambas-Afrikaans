@@ -1,0 +1,85 @@
+# Ubuntu (deprecated)
+
+[[ info
+The following instructions to install Gambas on Ubuntu is also applicable for Kubuntu and Xubuntu.
+Gambas is installed with success from version 7.04.
+]]
+
+<!--{warning
+Ubuntu 8.10 & 9.04 installs the new version of libtool by default, which does not work with Gambas. Please install and use the libtool 1.5 package instead if you want to compile Gambas.
+
+To do that (on 64 bits x86 systems):
+    $ sudo dpkg --force-downgrade -i libtool_1.5.26-1ubuntu1_amd64.deb
+
+I think you have to remove '_amd64' on 32 bits x86 systems.
+}-->
+
+Before going any further, consider using the .deb packages at:
+
+[http://encryptec.net/software/gambas-packages] \(This site requires user name and password)\
+[http://gambas.gnulinex.org/ubuntu] \(Completely free)
+
+These instructions may well work with previous versions of Ubuntu, but I would strongly recommend upgrading to 7.04 before going any further. If you want to find the exact package versions supported on a given release of Ubuntu, it will take time. If you can upgrade first the procedure below should get you going \'first time\'.
+
+* First you\'ll need to get the latest release of the source code.
+
+* Next you need to make sure you have the right development packages installed. To do this, start a terminal session (Applications->Accessories->Terminal) and copy the contents of the box below into the terminal. The password it will prompt for will be YOUR password. (note that your userid will need super-user access to your system ..)
+
+For Feisty and Gutsy:  **-- Deprecated --**
+
+    $ sudo apt-get install build-essential g++ automake autoconf libbz2-dev libgnorba-dev libfbclient1
+    libmysqlclient15-dev unixodbc-dev libpq-dev libsqlite0-dev libsqlite3-dev libgtk2.0-dev libldap2-dev libcurl3-dev libgtkglext1-dev libqt3-mt-dev kdebase-dev libpcre3-dev libsdl-sound1.2-dev libsdl-mixer1.2-dev libsdl-image1.2-dev libsage-dev libxml2-dev libxslt1-dev build-essential libbonobo2-dev libcos4-dev libomniorb4-dev firebird2-dev librsvg2-dev libpoppler-dev libpoppler-dev libpoppler-glib-dev libasound2-dev libartsc0-dev libesd0-dev libesd-alsa0 libdirectfb-dev libaa1-dev libarts1-dev kdelibs4-dev libffi4-dev libxtst-dev gettext
+
+For Hardy:
+    $ sudo apt-get install build-essential g++ automake autoconf libbz2-dev libgnorba-dev libfbclient2 libmysqlclient15-dev  unixodbc-dev libpq-dev libsqlite0-dev libsqlite3-dev libgtk2.0-dev libldap2-dev libcurl3-dev libgtkglext1-dev  libqt3-mt-dev kdebase-dev libpcre3-dev libsdl-sound1.2-dev libsdl-mixer1.2-dev libsdl-image1.2-dev libsage-dev libxml2-dev libxslt1-dev build-essential libbonobo2-dev libcos4-dev libomniorb4-dev firebird2.0-dev librsvg2-dev  libpoppler-dev libpoppler-dev libpoppler-glib-dev libasound2-dev libartsc0-dev libesd0-dev libesd-alsa0 libdirectfb-dev libaa1-dev libarts1-dev kdelibs4-dev libffi4-dev libxtst-dev gettext
+
+For Intrepid:
+    $ sudo apt-get install build-essential autoconf libbz2-dev libgnorba-dev libfbclient2 libmysqlclient15-dev unixodbc-dev libpq-dev libsqlite0-dev libsqlite3-dev libgtk2.0-dev libldap2-dev libcurl4-gnutls-dev libgtkglext1-dev libpcre3-dev libsdl-sound1.2-dev libsdl-mixer1.2-dev libsdl-image1.2-dev libsage-dev libxml2-dev libxslt1-dev libbonobo2-dev libcos4-dev libomniorb4-dev librsvg2-dev libpoppler-dev libpoppler-glib-dev libasound2-dev libartsc0-dev libesd0-dev libesd-alsa0 libdirectfb-dev libaa1-dev libarts1-dev libxtst-dev libffi-dev kdelibs4-dev firebird2.1-dev libqt4-dev
+
+For Jaunty:
+    sudo apt-get install build-essential autoconf libbz2-dev libgnorba-dev libfbclient2 libmysqlclient15-dev unixodbc-dev libpq-dev libsqlite0-dev libsqlite3-dev libgtk2.0-dev libldap2-dev libcurl4-gnutls-dev libgtkglext1-dev libpcre3-dev libsdl-sound1.2-dev libsdl-mixer1.2-dev libsdl-image1.2-dev libsage-dev libxml2-dev libxslt1-dev libbonobo2-dev libcos4-dev libomniorb4-dev librsvg2-dev libpoppler-dev libpoppler-glib-dev libasound2-dev libesd0-dev libesd-alsa0 libdirectfb-dev libaa1-dev libxtst-dev libffi-dev kdelibs4-dev firebird2.1-dev libqt4-dev libglew1.5-dev libimlib2-dev libv4l-dev libsdl-ttf2.0-dev
+
+For Karmic:
+    sudo apt-get install build-essential autoconf libbz2-dev libfbclient2 libmysqlclient15-dev unixodbc-dev libpq-dev libsqlite0-dev libsqlite3-dev libgtk2.0-dev libldap2-dev libcurl4-gnutls-dev libgtkglext1-dev libpcre3-dev libsdl-sound1.2-dev libsdl-mixer1.2-dev libsdl-image1.2-dev libsage-dev libxml2-dev libxslt1-dev libbonobo2-dev libcos4-dev libomniorb4-dev librsvg2-dev libpoppler-dev libpoppler-glib-dev libasound2-dev libesd0-dev libesd-alsa0 libdirectfb-dev libaa1-dev libxtst-dev libffi-dev kdelibs4-dev firebird2.1-dev libqt4-dev libglew1.5-dev libimlib2-dev libv4l-dev libsdl-ttf2.0-dev libgnome-keyring-dev
+
+For Lucid:
+    sudo apt-get install build-essential autoconf libbz2-dev libfbclient2 libmysqlclient15-dev unixodbc-dev libpq-dev libsqlite0-dev libsqlite3-dev libgtk2.0-dev libldap2-dev libcurl4-gnutls-dev libgtkglext1-dev libpcre3-dev libsdl-sound1.2-dev libsdl-mixer1.2-dev libsdl-image1.2-dev libsage-dev libxml2-dev libxslt1-dev libbonobo2-dev libcos4-dev libomniorb4-dev librsvg2-dev libpoppler-dev libpoppler-glib-dev libasound2-dev libesd0-dev libesd-alsa0 libdirectfb-dev libaa1-dev libxtst-dev libffi-dev kdelibs4-dev firebird2.1-dev libqt4-dev libglew1.5-dev libimlib2-dev libv4l-dev libsdl-ttf2.0-dev libgnome-keyring-dev
+
+For Maverick:
+    sudo apt-get install build-essential autoconf libbz2-dev libfbclient2 libmysqlclient-dev unixodbc-dev libpq-dev libsqlite0-dev libsqlite3-dev libgtk2.0-dev libldap2-dev libcurl4-gnutls-dev libgtkglext1-dev libpcre3-dev libsdl-sound1.2-dev libsdl-mixer1.2-dev libsdl-image1.2-dev libsage-dev libxml2-dev libxslt1-dev libbonobo2-dev libcos4-dev libomniorb4-dev librsvg2-dev libpoppler-dev libpoppler-glib-dev libasound2-dev libesd0-dev libdirectfb-dev libaa1-dev libxtst-dev libffi-dev kdelibs4-dev firebird2.1-dev libqt4-dev libglew1.5-dev libimlib2-dev libv4l-dev libsdl-ttf2.0-dev libgnome-keyring-dev libgdk-pixbuf2.0-dev
+
+For Natty:
+    sudo apt-get install build-essential autoconf libbz2-dev libfbclient2 libmysqlclient-dev unixodbc-dev libpq-dev libsqlite0-dev libsqlite3-dev libgtk2.0-dev libldap2-dev libcurl4-gnutls-dev libgtkglext1-dev libpcre3-dev libsdl-sound1.2-dev libsdl-mixer1.2-dev libsdl-image1.2-dev libsage-dev libxml2-dev libxslt1-dev libbonobo2-dev libcos4-dev libomniorb4-dev librsvg2-dev libpoppler-dev libpoppler-glib-dev libasound2-dev libesd0-dev libdirectfb-dev libaa1-dev libxtst-dev libffi-dev kdelibs4-dev firebird2.1-dev libqt4-dev libglew1.5-dev libimlib2-dev libv4l-dev libsdl-ttf2.0-dev libgnome-keyring-dev libgdk-pixbuf2.0-dev linux-libc-dev
+
+For Precise:
+    sudo apt-get install build-essential autoconf libbz2-dev libfbclient2 libmysqlclient-dev unixodbc-dev libpq-dev libsqlite0-dev libsqlite3-dev libgtk2.0-dev libldap2-dev libcurl4-gnutls-dev libgtkglext1-dev libpcre3-dev libsdl-sound1.2-dev libsdl-mixer1.2-dev libsdl-image1.2-dev libsage-dev libxml2-dev libxslt1-dev libbonobo2-dev libcos4-dev libomniorb4-dev librsvg2-dev libpoppler-dev libpoppler-glib-dev libasound2-dev libesd0-dev libdirectfb-dev libaa1-dev libxtst-dev libffi-dev kdelibs5-dev firebird2.1-dev libqt4-dev libglew1.5-dev libimlib2-dev libv4l-dev libsdl-ttf2.0-dev libgnome-keyring-dev libgdk-pixbuf2.0-dev linux-libc-dev libgsl0-dev
+
+[[ info
+For Gambas2, if you want pilot KDE application (example Kate) you must install:
+kdebase-dev (kdelibs4-dev will be removed and replaced with kdelibs5-dev
+and other package)
+]]
+
+* Unpack the source into '/usr/src'.
+    $ cd /usr/src
+    $ sudo tar xvfj /home/<your userid>/Desktop/gambas2-1.48.tar.bz2
+
+* Or get a subversion snapshot as explained on the website.
+
+* Move to the Gambas source folder and follow the build procedure. (check out the README file)
+    $ cd /usr/src/gambas2-1.9.48
+    $ sudo ./configure -C
+    $ sudo make
+    $ sudo make install
+
+This should leave you with a working version of Gambas in '/usr/local/bin' .. so if you now type in "gambas2" from the terminal session, it should start your nice new IDE.
+
+*Gareth Bult*
+
+#### Note Kubuntu (wig)
+
+Link on desktop or in menu: the executable is in
+    /usr/local/bin/gambas2
+
+You can replace the icon by
+    /usr/src/gambas2-1.9.91/app/src/gambas2/img/logo/new-logo.png

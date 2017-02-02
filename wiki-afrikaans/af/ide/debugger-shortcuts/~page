@@ -1,0 +1,39 @@
+# Debugger & compiler shortcuts
+
+[[
+Key
+--
+Action
+==
+'F5'
+--
+Run the project.
+==
+'SHIFT' + 'F5'
+--
+Run until the current line.
+==
+'F7'
+--
+Compile the project.
+==
+'ALT' + 'F7'
+--
+Recompile the project entirely.
+==
+'F8'
+--
+Run one line of code, entering functions.
+==
+'SHIFT' + 'F8'
+--
+Run until the next line of code in the same function.
+==
+'F9'
+--
+Toggle a breakpoint.
+==
+'ALT' + 'PAUSE'
+--
+Stop the program if it is running.
+]]
