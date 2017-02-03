@@ -17,10 +17,10 @@ At present it is my intention to translate the following:
 
 Any other contributors to an Afrikaans translation project is of course welcome to clone this Git repository and start translating.  But mainly, this repository is to keep me motivated in completing the translation project and to illustrate the current progress thereof.
 
-A note on the philosophy of this Afrikaans translation
-------------------------------------------------------
+'n Nota oor die denke omtrent hierdie vertaling
+-----------------------------------------------
 
-Gambas is 'n programontiwkkelingsplatform wat 'n variant van die BASIC rekenaartaal gebruik.  Dit is hoogs onwaarskynlik dat baie professionele programmeerders Gambas se Afrikaanse vertaling sal gebruik.  Die mark is eerder vir skole en selfs tersiêre instansies wat 'n veeldoelige platform benodig om die beginsels van programmering aan te leer.  Met daardie mark ingedagte, pas ek die terminologie ietwat aan om my te hou be terme wat 'n teikenmark wat 10 jaar en ouer is, sal begryp, en gebruik.
+Gambas is 'n ontwikkelingsplatform wat 'n weergawe van die BASIC rekenaartaal gebruik.  Dit is hoogs onwaarskynlik dat baie professionele programmeerders Gambas se Afrikaanse vertaling sal gebruik.  Die mark is eerder vir skole en selfs tersiêre instansies wat 'n veeldoelige platform benodig om die beginsels van programmering aan te leer.  Met daardie mark ingedagte, pas ek die rekenaarterminologie ietwat aan. Die doel is dat die teikenmark wat 10 jaar en ouer sal wees, hierdie vertaling sal begryp en dit maklik en sonder hindernisse sal gebruik.
 
 Casper Labuschagne
 
