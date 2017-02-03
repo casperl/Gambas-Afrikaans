@@ -1,0 +1,315 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: gambas-wiki 3.9.2\n"
+"PO-Revision-Date: 2017-02-03 01:27 UTC\n"
+"Last-Translator: casperl <casper.labuschagne@gmail.com>\n"
+"Language: af\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .project:1
+msgid "Gambas Wiki Web Application"
+msgstr "Gambas Wiki Webtoepassing"
+
+#: CClassInfo.class:379
+msgid "This class reimplements"
+msgstr "Hierde klas herimplementeer"
+
+#: CClassInfo.class:381
+msgid "This class inherits"
+msgstr "Hierdie klas erf"
+
+#: CClassInfo.class:388
+msgid "in &1"
+msgstr "in &1"
+
+#: CClassInfo.class:396
+msgid "This class is virtual."
+msgstr "Hierdie klas is virtueel."
+
+#: CClassInfo.class:398
+msgid "This class can be used like an object by creating a hidden instance on demand."
+msgstr "Hierdie klas kan gebruik word as 'n objek deur 'n verborge instansie op aanvraag te skep."
+
+#: CClassInfo.class:406
+msgid "This class is &1."
+msgstr "Hierdie klas is &1."
+
+#: CClassInfo.class:406
+msgid "creatable"
+msgstr "kan geskep word"
+
+#: CClassInfo.class:414
+msgid "This class is static."
+msgstr "Hierdie klas is staties."
+
+#: CClassInfo.class:416
+msgid "This class is not creatable."
+msgstr "Hierdie klas kan nie geskep word nie."
+
+#: CClassInfo.class:423
+msgid "This class can be used as a &1."
+msgstr "Hierdie klas kan gebruik word as 'n &1."
+
+#: CClassInfo.class:423
+msgid "function"
+msgstr "funksie"
+
+#: CClassInfo.class:423
+msgid "static function"
+msgstr "statiese funksie"
+
+#: CClassInfo.class:430
+msgid "This class acts like a &1 / &2 static array."
+msgstr "Hierdie klas tree op soos 'n &1 / &2 statiese skikking."
+
+#: CClassInfo.class:430
+msgid "read"
+msgstr "leesbaar"
+
+#: CClassInfo.class:430
+msgid "write"
+msgstr "skryf"
+
+#: CClassInfo.class:432
+msgid "This class acts like a &1 static array."
+msgstr "Hierdie klas tree op soos 'n &1 statiese skikking."
+
+#: CClassInfo.class:432
+msgid "read-only"
+msgstr "slegs leesbaar"
+
+#: CClassInfo.class:436
+msgid "This class acts like a &1 / &2 array."
+msgstr "Hierdie klas tree op soos 'n &1 / &2 skikking."
+
+#: CClassInfo.class:438
+msgid "This class acts like a &1 array."
+msgstr "Hierdie klas tree op soos 'n &1 skikking."
+
+#: CClassInfo.class:444
+msgid "This class is &1 with the &2 keyword."
+msgstr "Hierdie klas is &1 met die sleutelwoord &2. "
+
+#: CClassInfo.class:444
+msgid "enumerable"
+msgstr "telbaar"
+
+#: CClassInfo.class:444
+msgid "statically enumerable"
+msgstr "statisties telbaar"
+
+#: CClassInfo.class:453
+msgid "Static properties"
+msgstr "Statistiese eienskappe"
+
+#: CClassInfo.class:454
+msgid "Static methods"
+msgstr "Statiese metode"
+
+#: CClassInfo.class:456
+msgid "Constants"
+msgstr "Konstantes"
+
+#: CClassInfo.class:480
+msgid "Properties"
+msgstr "Eienskappe"
+
+#: CClassInfo.class:481
+msgid "Methods"
+msgstr "Metodes"
+
+#: CClassInfo.class:482
+msgid "Events"
+msgstr "Voorvalle"
+
+#: CComponent.class:58
+msgid "Graphical form management"
+msgstr "Grafiese vormbestuur"
+
+#: CComponent.class:59
+msgid "Event loop management"
+msgstr "Voorval lusbestuur"
+
+#: CComponent.class:60
+msgid "Image loading and saving"
+msgstr "Beeld laai en stoor"
+
+#: CComponent.class:61
+msgid "OpenGL display"
+msgstr "OpenGL weergave"
+
+#: CComponent.class:62
+msgid "Complex numbers"
+msgstr "Komplekse getal"
+
+#: CComponent.class:63
+msgid "XML management"
+msgstr "XML bestuur"
+
+#: CComponent.class:854
+msgid "Class"
+msgstr "Klas"
+
+#: CComponent.class:856 OldWiki.module:119
+msgid "Description"
+msgstr "Beskrywing"
+
+#: CComponent.class:883
+msgid "This component is not stable yet."
+msgstr "Hierdie komponent is nog nie stabiel nie."
+
+#: CComponent.class:885
+msgid "This component is deprecated."
+msgstr "Hierdie komponent het verstryk."
+
+#: CComponent.class:894
+msgid "Author"
+msgstr "Outeur"
+
+#: CComponent.class:896
+msgid "Authors"
+msgstr "Outeurs"
+
+#: CComponent.class:906
+msgid "Implements"
+msgstr "Implementeer"
+
+#: CComponent.class:918
+msgid "Requires"
+msgstr "Vereis"
+
+#: CComponent.class:933
+msgid "Excludes"
+msgstr "Sluit uit"
+
+#: Main.module:900
+msgid "There are &1 classes and &2 symbols in all Gambas components."
+msgstr "Daar is &1 klasse en &2 simbole in al die Gambas komponente."
+
+#: Main.module:1134
+msgid "You must be logged in to view the last changes."
+msgstr "U moet ingeteken wees om die nuutste wysigings te beskou."
+
+#: OldWiki.module:106
+msgid "Errors"
+msgstr "Foute"
+
+#: OldWiki.module:108
+msgid "Examples"
+msgstr "Voorbeelde"
+
+#: OldWiki.module:110
+msgid "See also"
+msgstr "Sien ook"
+
+#: OldWiki.module:117
+msgid "Message"
+msgstr "Boodskap"
+
+#: Wiki.class:180
+msgid "Warning! This is a preview. Click on the <b>&1</b> button to go back to the edit page."
+msgstr "Waarskuwing! Dit is 'n voorskou. Klik op die <b>&1</b> knoppie om terug te keer na die redigeerblad."
+
+#: Wiki.class:213
+msgid "This page does not exist in that language."
+msgstr "Hierdie bladsy bestaan nie in daardie taal nie."
+
+#: Wiki.class:228
+msgid "This page does not exist."
+msgstr "Hierdie bladsy bestaan nie."
+
+#: Wiki.class:284
+msgid "No change."
+msgstr "Geen wysiging."
+
+#: Wiki.class:298
+msgid "The english page is more recent."
+msgstr "Die Engelse bladsy is meer onlangs."
+
+#: Wiki.webpage:11
+msgid "Gambas Documentation"
+msgstr "Gambas Dokumentasie"
+
+#: Wiki.webpage:26
+msgid "OK"
+msgstr "OK"
+
+#: Wiki.webpage:83
+msgid "Preview"
+msgstr "Voorskou"
+
+#: Wiki.webpage:84
+msgid "Save"
+msgstr "Stoor"
+
+#: Wiki.webpage:85
+msgid "Cancel"
+msgstr "Kanselleer"
+
+#: Wiki.webpage:97
+msgid "<"
+msgstr "<"
+
+#: Wiki.webpage:102
+msgid ">"
+msgstr ">"
+
+#: Wiki.webpage:106
+msgid "Exit"
+msgstr "Uitgaan"
+
+#: Wiki.webpage:108
+msgid "Edit"
+msgstr "Redigeer"
+
+#: Wiki.webpage:109
+msgid "Delete"
+msgstr "Wis uit"
+
+#: Wiki.webpage:110
+msgid "Undo"
+msgstr "Herstel"
+
+#: Wiki.webpage:112
+msgid "Historic"
+msgstr "Histories"
+
+#: Wiki.webpage:116
+msgid "Create"
+msgstr "Skep"
+
+#: Wiki.webpage:124
+msgid "Logout"
+msgstr "Uitteken"
+
+#: Wiki.webpage:126
+msgid "Login"
+msgstr "Inteken"
+
+#: Wiki.webpage:141
+msgid "Password"
+msgstr "Wagwoord"
+
+#: Wiki.webpage:171
+msgid "Select the image file to upload..."
+msgstr "Selekteer beeldlêer om op te laai..."
+
+#: WikiMarkdown.class:145
+msgid "Since"
+msgstr "Sedert"
+
+#: WikiMarkdown.class:152
+msgid "This component does not exist."
+msgstr "Hierdie komponent bestaan nie."
+
+#: WikiMarkdown.class:177
+msgid "This class does not exist."
+msgstr "Hierdie klas bestaan nie."
+
+#: WikiMarkdown.class:190
+msgid "This symbol does not exist."
+msgstr "Hierdie simbool bestaan nie."
+
