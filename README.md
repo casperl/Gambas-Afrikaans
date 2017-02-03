@@ -20,7 +20,7 @@ Any other contributors to an Afrikaans translation project is of course welcome 
 'n Nota oor die denke omtrent hierdie vertaling
 -----------------------------------------------
 
-Gambas is 'n ontwikkelingsplatform wat 'n weergawe van die BASIC rekenaartaal gebruik.  Dit is hoogs onwaarskynlik dat baie professionele programmeerders Gambas se Afrikaanse vertaling sal gebruik.  Die mark is eerder vir skole en selfs tersiêre instansies wat 'n veeldoelige platform benodig om die beginsels van programmering aan te leer.  Met daardie mark ingedagte, pas ek die rekenaarterminologie ietwat aan. Die doel is dat die teikenmark wat 10 jaar en ouer sal wees, hierdie vertaling sal begryp en dit maklik en sonder hindernisse sal gebruik.
+Gambas is 'n ontwikkelingsplatform wat 'n weergawe van die BASIC rekenaartaal gebruik.  Dit is hoogs onwaarskynlik dat baie professionele programmeerders Gambas se Afrikaanse vertaling sal gebruik.  Die mark is eerder vir skole en selfs tersiêre instansies wat 'n veeldoelige platform benodig om die beginsels van programmering aan te leer.  Met daardie mark in gedagte, pas ek die rekenaarterminologie ietwat aan. Die doel is dat die teikenmark wat 10 jaar en ouer sal wees, hierdie vertaling sal begryp en dit maklik en sonder hindernisse sal gebruik.
 
 Casper Labuschagne
 
